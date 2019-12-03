@@ -19,13 +19,19 @@ description: >-
   support.
 intro:
   blurbs:
-    - image: /img/felicityface.db9af21d.png
-      text: >-
+    - text: >-
         In order to deepen my practice, I am currently completing an accredited
         diploma in transformational coaching through the Animas Centre for
         Coaching. I provide psychologically-based life coaching for people who
         want to create profound change in themselves, their work and their
         lives.
+    - text: >-
+        As part of my training, I will be offering free weekly or biweekly
+        coaching sessions to a limited number of clients. Sessions take place
+        virtually (i.e. Skype) or in person (London, UK). If you think you or
+        someone you know could benefit from free coaching, please get in touch
+        at coaching@felicityforsyth.com. We can then schedule an introductory
+        call to discuss your needs and how we can work together.
   heading: Empty
   description: Empty
 main:
