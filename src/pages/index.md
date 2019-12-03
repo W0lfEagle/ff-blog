@@ -3,7 +3,7 @@ templateKey: index-page
 title: Felicity Forsyth
 image: /img/seaport-during-daytime-132037.jpg
 heading: Coaching with me
-subheading: Relocation Life Coach
+subheading: Change + Transition Coach
 mainpitch:
   title: About me
   description: >-
@@ -18,20 +18,7 @@ description: >-
   to life in foreign countries providing settling in, linguistic and emotional
   support.
 intro:
-  blurbs:
-    - text: >-
-        In order to deepen my practice, I am currently completing an accredited
-        diploma in transformational coaching through the Animas Centre for
-        Coaching. I provide psychologically-based life coaching for people who
-        want to create profound change in themselves, their work and their
-        lives.
-    - text: >-
-        As part of my training, I will be offering free weekly or biweekly
-        coaching sessions to a limited number of clients. Sessions take place
-        virtually (i.e. Skype) or in person (London, UK). If you think you or
-        someone you know could benefit from free coaching, please get in touch
-        at coaching@felicityforsyth.com. We can then schedule an introductory
-        call to discuss your needs and how we can work together.
+  blurbs: []
   heading: Empty
   description: Empty
 main:
