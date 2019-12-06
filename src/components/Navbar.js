@@ -10,7 +10,6 @@ export const NavbarTemplate = class extends React.Component {
       active: false,
       navBarActiveClass: '',
     }
-    console.log(props)
   }
 
   toggleHamburger = () => {
@@ -61,21 +60,11 @@ export const NavbarTemplate = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
+            {this.props.data.menuItems.map(menuItem => 
+              <Link className="navbar-item" to={menuItem.linkURL}>
+                {menuItem.label}
               </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
+            )}
             </div>
             <div className="navbar-end has-text-centered">
               <a
@@ -89,7 +78,6 @@ export const NavbarTemplate = class extends React.Component {
                 </span>
               </a>
             </div>
-            <p>{this.props.data}</p>
           </div>
         </div>
       </nav>
@@ -98,14 +86,11 @@ export const NavbarTemplate = class extends React.Component {
 }
 
 const Navbar = props => {
-  console.log(props)
   if (!props.data) {
-    return <NavbarTemplate />; // TODO return null
+    return null;
   }
   const data = props.data.edges[0].node.frontmatter;
   return <NavbarTemplate data={data} />;
 };
-
-// export { Navbar };
 
 export default Navbar

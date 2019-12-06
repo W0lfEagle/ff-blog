@@ -8,7 +8,6 @@ import { withPrefix, graphql } from 'gatsby'
 
 const TemplateWrapper = ({ children, footerData, navbarData }) => {
   const { title, description } = useSiteMetadata()
-  console.log('navbarData', navbarData)
   return (
     <div>
       <Helmet>

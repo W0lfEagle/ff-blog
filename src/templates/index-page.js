@@ -126,12 +126,11 @@ IndexPageTemplate.propTypes = {
   }),
 }
 
-const IndexPage = ({ data, footerData, navbarData }) => {
+const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  console.log(navbarData)
 
   return (
-    <Layout footerData={footerData} navbarData={navbarData}>
+    <Layout footerData={data.footerData} navbarData={data.navbarData}>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
@@ -157,6 +156,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
+    ...LayoutFragment
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
@@ -189,7 +189,6 @@ export const pageQuery = graphql`
           description
         }
       }
-    },
-    ...LayoutFragment
+    }
   }
 `
