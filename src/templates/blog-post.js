@@ -58,7 +58,7 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout footerData={data.footerData} navbarData={data.navbarData}>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -89,6 +89,7 @@ export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
+    ...LayoutFragment
     markdownRemark(id: { eq: $id }) {
       id
       html

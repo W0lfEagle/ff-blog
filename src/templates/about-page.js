@@ -35,7 +35,7 @@ const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout footerData={data.footerData} navbarData={data.navbarData}>
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -53,6 +53,7 @@ export default AboutPage
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
+    ...LayoutFragment
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
