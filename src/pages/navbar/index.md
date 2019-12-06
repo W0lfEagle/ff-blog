@@ -15,6 +15,6 @@ menuItems:
     linkURL: /contact
   - label: Form Examples
     linkType: internal
-    linkURL: form-examples
+    linkURL: /contact/examples
 ---
 
