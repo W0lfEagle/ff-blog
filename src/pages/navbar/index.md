@@ -16,5 +16,8 @@ menuItems:
   - label: Form Examples
     linkType: internal
     linkURL: /contact/examples
+  - label: Thanks
+    linkType: internal
+    linkURL: /contact/thanks
 ---
 
