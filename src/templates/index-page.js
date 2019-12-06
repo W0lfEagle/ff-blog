@@ -126,11 +126,12 @@ IndexPageTemplate.propTypes = {
   }),
 }
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, footerData, navbarData }) => {
   const { frontmatter } = data.markdownRemark
+  console.log(navbarData)
 
   return (
-    <Layout>
+    <Layout footerData={footerData} navbarData={navbarData}>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
@@ -188,6 +189,7 @@ export const pageQuery = graphql`
           description
         }
       }
-    }
+    },
+    ...LayoutFragment
   }
 `

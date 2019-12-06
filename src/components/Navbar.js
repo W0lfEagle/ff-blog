@@ -3,13 +3,14 @@ import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
 
-const Navbar = class extends React.Component {
+export const NavbarTemplate = class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       active: false,
       navBarActiveClass: '',
     }
+    console.log(props)
   }
 
   toggleHamburger = () => {
@@ -88,11 +89,23 @@ const Navbar = class extends React.Component {
                 </span>
               </a>
             </div>
+            <p>{this.props.data}</p>
           </div>
         </div>
       </nav>
     )
   }
 }
+
+const Navbar = props => {
+  console.log(props)
+  if (!props.data) {
+    return <NavbarTemplate />; // TODO return null
+  }
+  const data = props.data.edges[0].node.frontmatter;
+  return <NavbarTemplate data={data} />;
+};
+
+// export { Navbar };
 
 export default Navbar
