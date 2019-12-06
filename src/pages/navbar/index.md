@@ -1,14 +1,20 @@
 ---
 templateKey: navbar
 menuItems:
-  - label: home
-    linkType: internal
-    linkURL: /
-  - label: about
+  - label: About
     linkType: internal
     linkURL: /about
-  - label: past meetups
+  - label: products
     linkType: internal
-    linkURL: /meetups
+    linkURL: /products
+  - label: Blog
+    linkType: internal
+    linkURL: /blog
+  - label: Contact
+    linkType: internal
+    linkURL: /contact
+  - label: Form Examples
+    linkType: internal
+    linkURL: form-examples
 ---
 
