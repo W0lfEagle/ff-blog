@@ -4,7 +4,7 @@ menuItems:
   - label: About
     linkType: internal
     linkURL: /about
-  - label: products
+  - label: Products
     linkType: internal
     linkURL: /products
   - label: Blog
