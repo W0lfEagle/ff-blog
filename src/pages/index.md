@@ -6,13 +6,14 @@ heading: About Coaching
 subheading: Felicity Forsyth
 mainpitch:
   title: >-
-    Hi, my name is Felicity and I coach my clients to navigate transition and
-    harness the power of change to craft a life brimming with purpose and
-    possibility. 
+    Navigate Transition. Harness the power of change. Craft a life brimming with
+    possibility and purpose.
   description: >
     Change arrives in many forms. A simple desire for change is the ideal
     starting point for our work together - even if you don’t know exactly what
-    that change might be. I also specialise in working with clients who have
+    that change might be. 
+
+    Drawing on my own experiences, I specialise in working with clients who have
     recently moved or experienced significant change in their lives. 
 description: >-
   Having lived and worked in over 7 different countries, I understand the unique
