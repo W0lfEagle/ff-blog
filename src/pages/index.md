@@ -9,9 +9,11 @@ mainpitch:
     Navigate Transition. Harness the power of change. Craft a life brimming with
     possibility and purpose.
   description: >
-    Change arrives in many forms. A simple desire for change is the ideal
-    starting point for our work together - even if you don’t know exactly what
-    that change might be. 
+    Change arrives in many forms. Maybe an unwelcome change has turned your life
+    upside down. Or perhaps you are feeling stuck and would welcome a change.
+
+    A simple desire for change is the ideal starting point for our work together
+    - even if you don’t know exactly what that change might be. 
 
     Drawing on my own experiences, I specialise in working with clients who have
     recently moved or experienced significant change in their lives. 
