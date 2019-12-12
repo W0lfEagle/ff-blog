@@ -1,15 +1,19 @@
 ---
 templateKey: index-page
-title: Felicity Forsyth
-image: /img/seaport-during-daytime-132037.jpg
-heading: Coaching with me
-subheading: Change + Transition Coach
+title: Change + Transition Coaching
+image: /img/img_20190516_134202.jpg
+heading: About Coaching
+subheading: Felicity Forsyth
 mainpitch:
-  title: About me
-  description: >-
-    Hi, I’m Felicity and I have been working as a relocation coach and language
-    teacher for the last 9 years, helping clients navigate international
-    transitions such as moves and career changes.
+  title: >-
+    Hi, my name is Felicity and I coach my clients to navigate transition and
+    harness the power of change to craft a life brimming with purpose and
+    possibility. 
+  description: >
+    Change arrives in many forms. A simple desire for change is the ideal
+    starting point for our work together - even if you don’t know exactly what
+    that change might be. I also specialise in working with clients who have
+    recently moved or experienced significant change in their lives. 
 description: >-
   Having lived and worked in over 7 different countries, I understand the unique
   challenges and rewards of building a home, career and community in a new
