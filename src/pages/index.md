@@ -1,26 +1,24 @@
 ---
 templateKey: index-page
-title: Change + Transition Coaching
-image: /img/img_20190516_134202.jpg
-heading: About Coaching
-subheading: Felicity Forsyth
+title: Harness the power of change
+image: /img/felicity-face-1.jpg
+heading: Coaching with me
+subheading: Explore. Navigate. Create.  Thrive through transition.
 mainpitch:
-  title: >-
-    Navigate Transition. Harness the power of change. Craft a life brimming with
-    possibility and purpose.
-  description: >
-    Change arrives in many forms. Maybe an unwelcome change has turned your life
-    upside down. Or perhaps you are feeling stuck and would welcome a change.
-
-    A desire for change is the ideal starting point for our work together - even
-    if you don’t know exactly what that change might be.
-
-    Drawing on my own experiences, I specialise in working with clients who have
-    recently moved or experienced significant change in their lives. 
+  title: Hello! I’m Felicity.
+  description: >-
+    I help people know, trust and express themselves in times of transition to
+    thrive with intention.
 description: >-
-  Coaching is a journey of self-awareness combining exploration, reflection,
-  motivation, goal-setting and action to help you connect to your truest self
-  and create the life you want.
+  Through one-to-one coaching packages delivered online or face-to-face in east
+  London, my goal is to help clients mindfully navigate change or intentionally
+  create change in their lives.   My work is steeped in a gentle sense of
+  compassionate enquiry, kind curiosity, empathy and humor.   With an ICF
+  accredited diploma in Transformational Coaching,  I take a holistic,
+  integrative approach to coaching, as a method to explore your inner landscape
+  and create space for you to more fully understand yourself.  Drop me a line if
+  this sounds like you. Our first call is free and a wonderful place to get a
+  taste for coaching without any commitment.
 intro:
   blurbs: []
   heading: My Approach
@@ -51,4 +49,3 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
-
