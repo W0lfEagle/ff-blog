@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Harness the power of change
 image: /img/felicity-face-1.jpg
-heading: Coaching with me
+heading: Coaching
 subheading: Explore. Navigate. Create.  Thrive through transition.
 mainpitch:
   title: Hello! I’m Felicity.
