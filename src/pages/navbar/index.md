@@ -1,23 +1,14 @@
 ---
 templateKey: navbar
 menuItems:
-  - label: About
+  - label: About Me
     linkType: internal
-    linkURL: /about
-  - label: Products
+    linkURL: /about-me
+  - label: Coaching
     linkType: internal
-    linkURL: /products
-  - label: Blog
+    linkURL: /coaching
+  - label: Kind Words
     linkType: internal
-    linkURL: /blog
-  - label: Contact
-    linkType: internal
-    linkURL: /contact
-  - label: Form Examples
-    linkType: internal
-    linkURL: /contact/examples
-  - label: Thanks
-    linkType: internal
-    linkURL: /contact/thanks
+    linkURL: /kind-words
 ---
 
