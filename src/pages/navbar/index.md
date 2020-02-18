@@ -3,7 +3,7 @@ templateKey: navbar
 menuItems:
   - label: About Me
     linkType: internal
-    linkURL: /about-me
+    linkURL: /about
   - label: Coaching
     linkType: internal
     linkURL: /coaching
@@ -11,4 +11,3 @@ menuItems:
     linkType: internal
     linkURL: /kind-words
 ---
-
