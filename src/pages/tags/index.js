@@ -12,7 +12,7 @@ const TagsPage = ({
     },
   },
 }) => (
-  <Layout>
+    <Layout footerData={this.props.data.footerData} navbarData={this.props.data.navbarData}>
     <section className="section">
       <Helmet title={`Tags | ${title}`} />
       <div className="container content">
@@ -42,6 +42,7 @@ export default TagsPage
 
 export const tagPageQuery = graphql`
   query TagsQuery {
+    ...LayoutFragment
     site {
       siteMetadata {
         title

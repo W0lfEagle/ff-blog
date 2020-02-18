@@ -1,8 +1,8 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 
-export default () => (
-  <Layout>
+export default ({data}) => (
+  <Layout footerData={data.footerData} navbarData={data.navbarData}>
     <section className="section">
       <div className="container">
         <div className="content">
@@ -13,3 +13,9 @@ export default () => (
     </section>
   </Layout>
 )
+
+export const thanksPageQuery = graphql`
+  query ThanksPage {
+    ...LayoutFragment
+  }
+  `

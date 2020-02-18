@@ -5,7 +5,7 @@ import Layout from '../../components/Layout'
 export default class Index extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout footerData={this.props.data.footerData} navbarData={this.props.data.navbarData}>
         <section className="section">
           <div className="container">
             <div className="content">
@@ -48,3 +48,9 @@ export default class Index extends React.Component {
     )
   }
 }
+
+export const examplePageQuery = graphql`
+  query ExamplePage {
+    ...LayoutFragment
+  }
+  `

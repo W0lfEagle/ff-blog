@@ -6,7 +6,7 @@ import BlogRoll from '../../components/BlogRoll'
 export default class BlogIndexPage extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout footerData={this.props.data.footerData} navbarData={this.props.data.navbarData}>
         <div
           className="full-width-image-container margin-top-0"
           style={{
@@ -36,3 +36,9 @@ export default class BlogIndexPage extends React.Component {
     )
   }
 }
+
+export const blogPageQuery = graphql`
+  query BlogPage {
+    ...LayoutFragment
+  }
+  `

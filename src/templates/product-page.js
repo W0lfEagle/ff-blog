@@ -132,7 +132,7 @@ const ProductPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout footerData={data.footerData} navbarData={data.navbarData}>
       <ProductPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
@@ -160,6 +160,7 @@ export default ProductPage
 
 export const productPageQuery = graphql`
   query ProductPage($id: String!) {
+    ...LayoutFragment
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title

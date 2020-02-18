@@ -42,7 +42,7 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout footerData={this.props.data.footerData} navbarData={this.props.data.navbarData}>
         <section className="section">
           <div className="container">
             <div className="content">
@@ -106,3 +106,9 @@ export default class Contact extends React.Component {
     )
   }
 }
+
+export const fileUploadPageQuery = graphql`
+  query FileUploadPage {
+    ...LayoutFragment
+  }
+  `

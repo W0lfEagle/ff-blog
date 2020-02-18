@@ -4,9 +4,9 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
-import { withPrefix } from 'gatsby'
+import { withPrefix, graphql } from 'gatsby'
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, footerData, navbarData }) => {
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -48,11 +48,54 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
+      <Navbar data={navbarData}/>
       <div>{children}</div>
-      <Footer />
+      <Footer data={footerData}/>
     </div>
   )
 }
+
+export const query = graphql`
+  fragment LayoutFragment on Query {
+    footerData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "footer" } } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            logoImage {
+              image
+              imageAlt
+              tagline
+            }
+            socialLinks {
+              image
+              imageAlt
+              label
+              linkURL
+            }
+          }
+        }
+      }
+    }
+    navbarData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "navbar" } } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            logoImage {
+              image
+              imageAlt
+            }
+            menuItems {
+              label
+              linkType
+              linkURL
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default TemplateWrapper

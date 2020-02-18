@@ -21,7 +21,7 @@ class TagRoute extends React.Component {
     } tagged with “${tag}”`
 
     return (
-      <Layout>
+      <Layout footerData={this.props.data.footerData} navbarData={this.props.data.navbarData}>
         <section className="section">
           <Helmet title={`${tag} | ${title}`} />
           <div className="container content">
@@ -48,6 +48,7 @@ export default TagRoute
 
 export const tagPageQuery = graphql`
   query TagPage($tag: String) {
+    ...LayoutFragment
     site {
       siteMetadata {
         title
