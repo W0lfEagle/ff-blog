@@ -79,13 +79,13 @@ module.exports = {
 
     // <link href="https://fonts.googleapis.com/css?family=Calligraffitti|Playfair+Display|Roboto&display=swap" rel="stylesheet">
 
-    {
-      resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
-      options: {
-        develop: true, // Activates purging in npm run develop
-        purgeOnly: ["/all.sass"] // applies purging only on the bulma css file
-      }
-    }, // must be after other CSS plugins
+    // {
+    //   resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
+    //   options: {
+    //     develop: true, // Activates purging in npm run develop
+    //     purgeOnly: ["/all.sass"] // applies purging only on the bulma css file
+    //   }
+    // }, // must be after other CSS plugins
     "gatsby-plugin-netlify" // make sure to keep it last in the array
   ]
 };

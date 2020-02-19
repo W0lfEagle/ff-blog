@@ -25,7 +25,10 @@ export const FooterTemplate = class extends React.Component {
                 <section>
                   <ul className="menu-list">
                     <li>
-                      <Link className="navbar-item" to="/contact">
+                      <Link
+                        className="navbar-item has-text-right"
+                        to="/contact"
+                      >
                         Privacy Policy
                       </Link>
                     </li>
