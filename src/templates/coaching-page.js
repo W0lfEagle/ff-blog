@@ -4,7 +4,15 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
-export const CoachingPageTemplate = ({ title, content, contentComponent }) => {
+export const CoachingPageTemplate = ({
+  title1,
+  content1,
+  title2,
+  content2,
+  title3,
+  content3,
+  contentComponent
+}) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -14,20 +22,17 @@ export const CoachingPageTemplate = ({ title, content, contentComponent }) => {
           <div className="column is-6">
             <div className="section">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
-                {/* {title} */}
-                Coaching with me...
+                {title1}
               </h2>
-              <PageContent className="content" content={content} />
+              <PageContent className="content" content={content1} />
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
-                {/* {title} */}
-                Let's talk...
+                {title2}
               </h2>
-              <PageContent className="content" content={content} />
+              <PageContent className="content" content={content2} />
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
-                {/* {title} */}
-                The details...
+                {title3}
               </h2>
-              <PageContent className="content" content={content} />
+              <PageContent className="content" content={content3} />
             </div>
           </div>
           <div className="column is-6">
@@ -53,8 +58,12 @@ export const CoachingPageTemplate = ({ title, content, contentComponent }) => {
 };
 
 CoachingPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
+  title1: PropTypes.string.isRequired,
+  content1: PropTypes.string,
+  title2: PropTypes.string.isRequired,
+  content2: PropTypes.string,
+  title3: PropTypes.string.isRequired,
+  content3: PropTypes.string,
   contentComponent: PropTypes.func
 };
 
@@ -65,8 +74,12 @@ const CoachingPage = ({ data }) => {
     <Layout footerData={data.footerData} navbarData={data.navbarData}>
       <CoachingPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        title1={post.frontmatter.title1}
+        content1={post.frontmatter.body1}
+        title2={post.frontmatter.title2}
+        content2={post.frontmatter.body2}
+        title3={post.frontmatter.title3}
+        content3={post.frontmatter.body3}
       />
     </Layout>
   );
@@ -84,7 +97,12 @@ export const cachingPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
+        title1
+        title2
+        title3
+        body1
+        body2
+        body3
       }
     }
   }

@@ -142,8 +142,23 @@ collections:
               widget: "hidden",
               default: "coaching-page",
             }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Title1", name: "title1", widget: "string" }
+          - { label: "Body1", name: "body1", widget: "markdown" }
+          - { label: "Title2", name: "title2", widget: "string" }
+          - { label: "Body2", name: "body2", widget: "markdown" }
+          - { label: "Title3", name: "title3", widget: "string" }
+          - { label: "Body3", name: "body3", widget: "markdown" }
+          # - {
+          #     label: "Heading and content",
+          #     name: "heading-and-content",
+          #     widget: "list",
+          #     fields:
+          #       [
+          #         { label: "Heading", name: "heading", widget: "string" },
+          #         { label: "Content", name: "content", widget: "markdown" },
+          #       ],
+          #   }
+
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"

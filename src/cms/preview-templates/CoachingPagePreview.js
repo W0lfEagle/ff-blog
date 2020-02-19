@@ -4,8 +4,12 @@ import { CoachingPageTemplate } from "../../templates/coaching-page";
 
 const CoachingPagePreview = ({ entry, widgetFor }) => (
   <CoachingPageTemplate
-    title={entry.getIn(["data", "title"])}
-    content={widgetFor("body")}
+    title1={entry.getIn(["data", "title1"])}
+    content1={widgetFor("body1")}
+    title2={entry.getIn(["data", "title2"])}
+    content2={widgetFor("body2")}
+    title3={entry.getIn(["data", "title3"])}
+    content3={widgetFor("body3")}
   />
 );
 
