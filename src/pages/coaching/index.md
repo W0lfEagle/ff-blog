@@ -17,4 +17,17 @@ heading_and_content:
           access your inner creativity.  I meet you where you are, listening in
           order to understand what will work best for you.
     heading: Coaching with me...
+  - content:
+      - paragraph: >-
+          The first step towards starting this journey is to schedule a free
+          call where we will have a chat about what you’re looking for and where
+          you want to go. The call will include some coaching so even if you’re
+          not sure you’re ready to commit, this is a wonderful place to get a
+          taste for what might be possible without any obligation.
+    heading: Let’s talk...
+  - content:
+      - paragraph: >-
+          Sessions take place via phone, video call or in-person in east London
+          on a weekly or bi-weekly basis. 
+    heading: The details...
 ---
