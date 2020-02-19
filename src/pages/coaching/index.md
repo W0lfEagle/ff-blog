@@ -30,4 +30,12 @@ heading_and_content:
           Sessions take place via phone, video call or in-person in east London
           on a weekly or bi-weekly basis. 
     heading: The details...
+packages:
+  - content: >-
+      One-off coaching sessions at an hourly rate of £60. Appropriate for a
+      specific question you would like to explore or as a top-up if we have
+      worked together previously.
+    heading: Explore.
+    image: /img/felicityface.db9af21d.png
 ---
+
