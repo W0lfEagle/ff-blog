@@ -36,6 +36,16 @@ packages:
       specific question you would like to explore or as a top-up if we have
       worked together previously.
     heading: Explore.
-    image: /img/felicityface.db9af21d.png
+    image: /img/ff-hike.svg
+  - content: >-
+      Block of 4 coaching sessions at an hourly rate of £50 (total cost of
+      £200). 
+    heading: Navigate.
+    image: /img/ff-compass.svg
+  - content: >-
+      Block of 6 coaching sessions at an hourly rate of £45 per session (total
+      cost of £270).
+    heading: Create.
+    image: /img/ff-mountain.svg
 ---
 
