@@ -4,7 +4,12 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({
+  title1,
+  title2,
+  content,
+  contentComponent
+}) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -15,10 +20,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
             <div className="column is-6">
               <div className="section">
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
-                  {/* {title} */}
-                  Hello!
+                  {title1}
                   <br />
-                  I'm Felicity.
+                  {title2}
                 </h2>
                 <PageContent className="content" content={content} />
               </div>
@@ -91,8 +95,13 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 };
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
+  title1: PropTypes.string,
+  title2: PropTypes.string,
   content: PropTypes.string,
+  myJourney: PropTypes.shape({
+    heading: PropTypes.string,
+    steps: PropTypes.arrayOf(PropTypes.shape({ step: PropTypes.string }))
+  }),
   contentComponent: PropTypes.func
 };
 
@@ -103,8 +112,10 @@ const AboutPage = ({ data }) => {
     <Layout footerData={data.footerData} navbarData={data.navbarData}>
       <AboutPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
+        title1={post.frontmatter.title1}
+        title2={post.frontmatter.title2}
         content={post.html}
+        myJourney={post.frontmatter.myJourney}
       />
     </Layout>
   );
@@ -122,7 +133,14 @@ export const aboutPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
+        title1
+        title2
+        myJourney {
+          heading
+          steps {
+            step
+          }
+        }
       }
     }
   }

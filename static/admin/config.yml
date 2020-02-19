@@ -108,8 +108,24 @@ collections:
               widget: "hidden",
               default: "about-page",
             }
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Title1", name: "title1", widget: "string" }
+          - { label: "Title2", name: "title2", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: My Journey,
+              name: myJourney,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  {
+                    label: Steps,
+                    name: steps,
+                    widget: list,
+                    fields: [{ label: "Step", name: "step", widget: "text" }],
+                  },
+                ],
+            }
       - file: "src/pages/coaching/index.md"
         label: "Coaching"
         name: "coaching"
