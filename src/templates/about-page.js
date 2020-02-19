@@ -8,6 +8,7 @@ export const AboutPageTemplate = ({
   title1,
   title2,
   content,
+  myJourney,
   contentComponent
 }) => {
   const PageContent = contentComponent || Content;
@@ -60,30 +61,14 @@ export const AboutPageTemplate = ({
             <div className="column is-6">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
                 {/* {title} */}
-                Some of my stops along the way...
+                {myJourney.heading}
               </h2>
               {/* <PageContent className="content" content={content} /> */}
               <div className="content">
                 <ul>
-                  <li>18 years deep in the 💛 of Texas.</li>
-                  <li>
-                    4 years studying International Development in Washington, DC
-                    (BA, GWU).
-                  </li>
-                  <li>
-                    A year studying Medical Anthropology and Sociology in
-                    Amsterdam (MSc, UvA).
-                  </li>
-                  <li>
-                    10 years wandering the world as a teacher and relocation
-                    coach in Thailand, Taiwan, The Netherlands, Senegal,
-                    Ecuador, Colombia and Costa Rica.
-                  </li>
-                  <li>3 years working in corporate relocation in London.</li>
-                  <li>
-                    A year studying transformational coaching at Animas Centre
-                    in London.
-                  </li>
+                  {myJourney.steps.map(step => (
+                    <li key={step.step}>{step.step}</li>
+                  ))}
                 </ul>
               </div>
             </div>
