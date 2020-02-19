@@ -3,8 +3,17 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({
+  title1,
+  title2,
+  content,
+  image1,
+  image2,
+  myJourney,
+  contentComponent
+}) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -15,17 +24,20 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
             <div className="column is-6">
               <div className="section">
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
-                  {/* {title} */}
-                  Hello!
+                  {title1}
                   <br />
-                  I'm Felicity.
+                  {title2}
                 </h2>
                 <PageContent className="content" content={content} />
               </div>
             </div>
             <div className="column is-6">
               <figure className="image image is-5by4">
-                <img src="https://bulma.io/images/placeholders/256x256.png"></img>
+                {image1 ? (
+                  <PreviewCompatibleImage imageInfo={{ image: image1 }} />
+                ) : (
+                  <img src="https://bulma.io/images/placeholders/256x256.png"></img>
+                )}
               </figure>
               <div className="column is-10 is-offset-1">
                 <div className="card contact-card">
@@ -50,36 +62,24 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
           <div className="columns">
             <div className="column is-6">
               <figure className="image image is-5by4">
-                <img src="https://bulma.io/images/placeholders/256x256.png"></img>
+                {image2 ? (
+                  <PreviewCompatibleImage imageInfo={{ image: image2 }} />
+                ) : (
+                  <img src="https://bulma.io/images/placeholders/256x256.png"></img>
+                )}
               </figure>
             </div>
             <div className="column is-6">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
                 {/* {title} */}
-                Some of my stops along the way...
+                {myJourney.heading}
               </h2>
               {/* <PageContent className="content" content={content} /> */}
               <div className="content">
                 <ul>
-                  <li>18 years deep in the 💛 of Texas.</li>
-                  <li>
-                    4 years studying International Development in Washington, DC
-                    (BA, GWU).
-                  </li>
-                  <li>
-                    A year studying Medical Anthropology and Sociology in
-                    Amsterdam (MSc, UvA).
-                  </li>
-                  <li>
-                    10 years wandering the world as a teacher and relocation
-                    coach in Thailand, Taiwan, The Netherlands, Senegal,
-                    Ecuador, Colombia and Costa Rica.
-                  </li>
-                  <li>3 years working in corporate relocation in London.</li>
-                  <li>
-                    A year studying transformational coaching at Animas Centre
-                    in London.
-                  </li>
+                  {myJourney.steps.map(step => (
+                    <li key={step.step}>{step.step}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -91,8 +91,15 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 };
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
+  title1: PropTypes.string,
+  title2: PropTypes.string,
   content: PropTypes.string,
+  myJourney: PropTypes.shape({
+    heading: PropTypes.string,
+    steps: PropTypes.arrayOf(PropTypes.shape({ step: PropTypes.string }))
+  }),
+  image1: PropTypes.object,
+  image2: PropTypes.object,
   contentComponent: PropTypes.func
 };
 
@@ -103,8 +110,12 @@ const AboutPage = ({ data }) => {
     <Layout footerData={data.footerData} navbarData={data.navbarData}>
       <AboutPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
+        title1={post.frontmatter.title1}
+        title2={post.frontmatter.title2}
         content={post.html}
+        image1={post.image1}
+        image2={post.image2}
+        myJourney={post.frontmatter.myJourney}
       />
     </Layout>
   );
@@ -117,12 +128,33 @@ AboutPage.propTypes = {
 export default AboutPage;
 
 export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+  query AboutPage {
     ...LayoutFragment
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
       html
       frontmatter {
-        title
+        title1
+        title2
+        myJourney {
+          heading
+          steps {
+            step
+          }
+        }
+        image1 {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image2 {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
