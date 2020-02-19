@@ -1,6 +1,7 @@
 ---
 templateKey: about-page
 title1: Hello!
+title2: I'm Felicity.
 myJourney:
   heading: Some of my stops along the way...
   steps:
