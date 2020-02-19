@@ -1,6 +1,6 @@
 ---
 templateKey: coaching-page
-cover_image: /img/seaport-during-daytime-132037.jpg
+cover_image: /img/20200201_145750.jpg
 heading_and_content:
   - content:
       - paragraph: >-
