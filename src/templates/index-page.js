@@ -4,7 +4,18 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 
-export const IndexPageTemplate = ({ image, title, mainpitch }) => (
+export const IndexPageTemplate = ({
+  image,
+  title,
+  heroTitle2,
+  heroTitle3,
+  mainpitch,
+  pageContent,
+  salesPitch,
+  quote1,
+  testimonials,
+  quote2
+}) => (
   <div>
     <div
       className="full-width-image margin-top-0"
@@ -14,7 +25,6 @@ export const IndexPageTemplate = ({ image, title, mainpitch }) => (
         })`
       }}
     >
-      {/* <div className="section"> */}
       <div className="container is-fluid">
         <div className="columns">
           <div className="column is-5">
@@ -23,25 +33,21 @@ export const IndexPageTemplate = ({ image, title, mainpitch }) => (
               style={{
                 color: "white",
                 lineHeight: "1.5"
-                // padding: "0.25em"
               }}
             >
               {title}
             </h1>
             <h1 className="has-text-weight-bold has-text-white is-size-3 has-text-centered">
-              {/* {subheading} */}
-              <span className="is-italic">Explore. Navigate. Create.</span>
+              <span className="is-italic">{heroTitle2}</span>
               <br />
-              <span>Thrive through transition.</span>
+              <span>{heroTitle3}</span>
             </h1>
           </div>
-          {/* </div> */}
         </div>
       </div>
     </div>
     <section className="section">
       <div className="container">
-        {/* <div className="section"> */}
         <div className="columns">
           <div className="column is-6">
             <div className="content">
@@ -55,39 +61,24 @@ export const IndexPageTemplate = ({ image, title, mainpitch }) => (
               </div>
             </div>
             <div className="content">
-              {/* <p className="has-text-justified">{description}</p> */}
-              <p className="has-text-justified">
-                Through one-to-one coaching packages delivered online or
-                face-to-face in east London, my goal is to help clients
-                mindfully navigate change or intentionally create change in
-                their lives.
-              </p>
-              <p className="has-text-justified">
-                My work is steeped in a gentle sense of compassionate enquiry,
-                kind curiosity, empathy and humor.{" "}
-              </p>
-              <p className="has-text-justified">
-                With an ICF accredited diploma in Transformational Coaching, I
-                take a holistic, integrative approach to coaching, as a method
-                to explore your inner landscape and create space for you to more
-                fully understand yourself.
-              </p>
-              <p className="has-text-justified">
-                Drop me a line if this sounds like you. Our first call is free
-                and a wonderful place to get a taste for coaching without any
-                commitment.
-              </p>
+              {pageContent.map(content => (
+                <p key={content.paragraph} className="has-text-justified">
+                  {content.paragraph}
+                </p>
+              ))}
             </div>
           </div>
-          {/* </div> */}
+
           <div className="column is-4 is-offset-1 ">
             <div className="content">
               <div className="tile">
                 <h1 className="title has-text-primary has-text-centered">
-                  Let’s connect, have a chat and dream about what’s possible.
+                  {salesPitch}
                 </h1>
               </div>
             </div>
+
+            {/* TODO - Contact Card Component */}
             <div className="card contact-card">
               <div className="card-content has-text-centered">
                 <h2 className="is-size-4 has-text-centered has-text-primary">
@@ -100,21 +91,24 @@ export const IndexPageTemplate = ({ image, title, mainpitch }) => (
                 </button>
               </div>
             </div>
+            {/* ------ */}
           </div>
         </div>
       </div>
     </section>
+
+    {/* QUOTE 1 */}
     <section className="hero is-danger is-medium">
       <div className="hero-body">
         <div className="container has-text-centered">
-          <h1 className="title">
-            To exist is to change, to change is to mature, to mature is to go on
-            creating oneself endlessly.
-          </h1>
-          <h2 className="subtitle is-italic">- Henri Bergson</h2>
+          <h1 className="title">{quote1.quote}</h1>
+          <h2 className="subtitle is-italic">- {quote1.by}</h2>
         </div>
       </div>
     </section>
+    {/* ------ */}
+
+    {/* KIND WORDS SECTION */}
     <section className="section is-medium">
       <div className="container">
         <div className="heading">
@@ -124,45 +118,24 @@ export const IndexPageTemplate = ({ image, title, mainpitch }) => (
         </div>
         <div className="section">
           <div className="columns">
-            <div className="column">
-              <p>
-                “I would like to send you a huge heartfelt thank you for your
-                wonderful course. I started my blog only a few months before the
-                course began so I was a complete novice and not feeling all that
-                confident. All the ideas and prompts and encouragement for
-                revealing our true selves in a voice authentic to us, plus the
-                wonderful community of creative women, have made this not only a
-                truly memorable and rich experience, but also a very practically
-                useful one for establishing our own unique web presence. Thank
-                you for so generously sharing yourself with us!” - Leah
-              </p>
-            </div>
-            <div className="column">
-              <p>
-                “Blogging from the Heart turned out to be one of my favorite
-                e-courses. Thank you so much for putting it together! You’ve
-                inspired me to finally take the plunge and make my blog into the
-                space I’ve always dreamed of. Your design tips and writing
-                prompts have helped me get through days where inspiration
-                wouldn’t flow freely and inspired me to reveal a little more of
-                myself in my writing. With your guidance my blog has finally
-                become a place for community. I couldn’t have asked for more!
-                I’m looking forward to the pdf and will definitely be suggesting
-                this class to any blogger I know who wants to take things to the
-                next level. I can’t believe it all went by so quickly!” - Johnny
-              </p>
-            </div>
+            {testimonials.map(t => (
+              <div className="column">
+                <p>
+                  “{t.quote}” - {t.by}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
+    {/* ------ */}
+
     <section className="hero is-primary is-medium">
       <div className="hero-body">
         <div className="container has-text-centered">
-          <h1 className="title">
-            And you, when will you begin that long journey into yourself?
-          </h1>
-          <h2 className="subtitle is-italic">- Rumi</h2>
+          <h1 className="title">{quote2.quote}</h1>
+          <h2 className="subtitle is-italic">- {quote2.by}</h2>
         </div>
       </div>
     </section>
@@ -172,7 +145,29 @@ export const IndexPageTemplate = ({ image, title, mainpitch }) => (
 IndexPageTemplate.propTypes = {
   image: PropTypes.object,
   title: PropTypes.string,
-  mainpitch: PropTypes.object
+  heroTitle2: PropTypes.string,
+  heroTitle3: PropTypes.string,
+  pageContent: PropTypes.arrayOf(
+    PropTypes.shape({
+      paragraph: PropTypes.string
+    })
+  ),
+  mainpitch: PropTypes.object,
+  salesPitch: PropTypes.string,
+  quote1: PropTypes.shape({
+    quote: PropTypes.string,
+    by: PropTypes.string
+  }),
+  testimonials: PropTypes.arrayOf(
+    PropTypes.shape({
+      quote: PropTypes.string,
+      by: PropTypes.string
+    })
+  ),
+  quote2: PropTypes.shape({
+    quote: PropTypes.string,
+    by: PropTypes.string
+  })
 };
 
 const IndexPage = ({ data }) => {
@@ -183,7 +178,14 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
+        heroTitle2={frontmatter.heroTitle2}
+        heroTitle3={frontmatter.heroTitle3}
         mainpitch={frontmatter.mainpitch}
+        pageContent={frontmatter.pageContent}
+        salesPitch={frontmatter.salesPitch}
+        quote1={frontmatter.quote1}
+        testimonials={frontmatter.testimonials}
+        quote2={frontmatter.quote2}
       />
     </Layout>
   );
@@ -205,6 +207,8 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        heroTitle2
+        heroTitle3
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -215,6 +219,22 @@ export const pageQuery = graphql`
         mainpitch {
           title
           description
+        }
+        pageContent {
+          paragraph
+        }
+        salesPitch
+        quote1 {
+          quote
+          by
+        }
+        testimonials {
+          quote
+          by
+        }
+        quote2 {
+          quote
+          by
         }
       }
     }
