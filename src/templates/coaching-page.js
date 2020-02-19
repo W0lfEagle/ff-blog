@@ -5,34 +5,26 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
 export const CoachingPageTemplate = ({
-  title1,
-  content1,
-  title2,
-  content2,
-  title3,
-  content3,
+  headingAndContent,
   contentComponent
 }) => {
   const PageContent = contentComponent || Content;
-
   return (
     <div className="section">
       <div className="container">
         <div className="columns">
           <div className="column is-6">
             <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
-                {title1}
-              </h2>
-              <PageContent className="content" content={content1} />
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
-                {title2}
-              </h2>
-              <PageContent className="content" content={content2} />
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
-                {title3}
-              </h2>
-              <PageContent className="content" content={content3} />
+              {headingAndContent.map(hc => (
+                <div className="content" key={hc.heading}>
+                  <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
+                    {hc.heading}
+                  </h2>
+                  {hc.content.map(c => (
+                    <p key={c.paragraph}>{c.paragraph}</p>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
           <div className="column is-6">
@@ -44,7 +36,7 @@ export const CoachingPageTemplate = ({
                   </h2>
                 </div>
                 <div className="card-content">
-                  <button class="button is-medium is-fullwidth is-primary">
+                  <button className="button is-medium is-fullwidth is-primary">
                     Start your journey
                   </button>
                 </div>
@@ -58,12 +50,7 @@ export const CoachingPageTemplate = ({
 };
 
 CoachingPageTemplate.propTypes = {
-  title1: PropTypes.string.isRequired,
-  content1: PropTypes.string,
-  title2: PropTypes.string.isRequired,
-  content2: PropTypes.string,
-  title3: PropTypes.string.isRequired,
-  content3: PropTypes.string,
+  headingAndContent: PropTypes.array,
   contentComponent: PropTypes.func
 };
 
@@ -74,12 +61,7 @@ const CoachingPage = ({ data }) => {
     <Layout footerData={data.footerData} navbarData={data.navbarData}>
       <CoachingPageTemplate
         contentComponent={HTMLContent}
-        title1={post.frontmatter.title1}
-        content1={post.frontmatter.body1}
-        title2={post.frontmatter.title2}
-        content2={post.frontmatter.body2}
-        title3={post.frontmatter.title3}
-        content3={post.frontmatter.body3}
+        headingAndContent={post.frontmatter.heading_and_content}
       />
     </Layout>
   );
@@ -92,17 +74,16 @@ CoachingPage.propTypes = {
 export default CoachingPage;
 
 export const cachingPageQuery = graphql`
-  query CoachingPage($id: String!) {
+  query CoachingPage {
     ...LayoutFragment
-    markdownRemark(id: { eq: $id }) {
-      html
+    markdownRemark(frontmatter: { templateKey: { eq: "coaching-page" } }) {
       frontmatter {
-        title1
-        title2
-        title3
-        body1
-        body2
-        body3
+        heading_and_content {
+          heading
+          content {
+            paragraph
+          }
+        }
       }
     }
   }

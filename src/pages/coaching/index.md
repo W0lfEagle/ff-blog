@@ -18,4 +18,3 @@ heading_and_content:
           order to understand what will work best for you.
     heading: Coaching with me...
 ---
-
