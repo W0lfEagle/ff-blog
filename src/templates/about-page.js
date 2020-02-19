@@ -24,7 +24,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
               </div>
             </div>
             <div className="column is-6">
-              <figure class="image image is-5by4">
+              <figure className="image image is-5by4">
                 <img src="https://bulma.io/images/placeholders/256x256.png"></img>
               </figure>
               <div className="column is-10 is-offset-1">
@@ -35,7 +35,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
                     </h2>
                   </div>
                   <div className="card-content">
-                    <button class="button is-medium is-fullwidth is-primary">
+                    <button className="button is-medium is-fullwidth is-primary">
                       Start your journey
                     </button>
                   </div>
@@ -49,7 +49,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         <div className="container">
           <div className="columns">
             <div className="column is-6">
-              <figure class="image image is-5by4">
+              <figure className="image image is-5by4">
                 <img src="https://bulma.io/images/placeholders/256x256.png"></img>
               </figure>
             </div>

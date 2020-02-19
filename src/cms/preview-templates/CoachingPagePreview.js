@@ -4,8 +4,20 @@ import { CoachingPageTemplate } from "../../templates/coaching-page";
 
 const CoachingPagePreview = ({ entry }) => {
   const entryHc = entry.getIn(["data", "heading_and_content"]);
-  const hc = entryHc ? entryHc.toJs() : [];
-  return <CoachingPageTemplate headingAndContent={hc} />;
+  const hc = entryHc ? entryHc.toJS() : [];
+
+  const entryPackages = entry.getIn(["data", "packages"]);
+  const packages = entryPackages ? entryPackages.toJS() : [];
+
+  const coverImage = entry.getIn(["data", "cover_image"]);
+
+  return (
+    <CoachingPageTemplate
+      headingAndContent={hc}
+      packages={packages}
+      coverImage={coverImage}
+    />
+  );
 };
 
 CoachingPagePreview.propTypes = {

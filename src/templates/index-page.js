@@ -16,14 +16,6 @@ export const IndexPageTemplate = ({
   intro
 }) => (
   <div>
-    {/* <section class="hero is-info is-large">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">Large title</h1>
-          <h2 class="subtitle">Large subtitle</h2>
-        </div>
-      </div>
-    </section> */}
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -113,7 +105,7 @@ export const IndexPageTemplate = ({
                 </h2>
               </div>
               <div className="card-content">
-                <button class="button is-medium is-fullwidth is-primary">
+                <button className="button is-medium is-fullwidth is-primary">
                   Start your journey
                 </button>
               </div>
@@ -122,25 +114,27 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-    <section class="hero is-danger is-medium">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="title">
+    <section className="hero is-danger is-medium">
+      <div className="hero-body">
+        <div className="container has-text-centered">
+          <h1 className="title">
             To exist is to change, to change is to mature, to mature is to go on
             creating oneself endlessly.
           </h1>
-          <h2 class="subtitle is-italic">- Henri Bergson</h2>
+          <h2 className="subtitle is-italic">- Henri Bergson</h2>
         </div>
       </div>
     </section>
-    <section class="section is-medium">
-      <div class="container">
-        <div class="heading">
-          <h1 class="title has-text-info has-text-centered">Kind Words...</h1>
+    <section className="section is-medium">
+      <div className="container">
+        <div className="heading">
+          <h1 className="title has-text-info has-text-centered">
+            Kind Words...
+          </h1>
         </div>
         <div className="section">
-          <div class="columns">
-            <div class="column">
+          <div className="columns">
+            <div className="column">
               <p>
                 “I would like to send you a huge heartfelt thank you for your
                 wonderful course. I started my blog only a few months before the
@@ -153,7 +147,7 @@ export const IndexPageTemplate = ({
                 you for so generously sharing yourself with us!” - Leah
               </p>
             </div>
-            <div class="column">
+            <div className="column">
               <p>
                 “Blogging from the Heart turned out to be one of my favorite
                 e-courses. Thank you so much for putting it together! You’ve
@@ -172,13 +166,13 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-    <section class="hero is-primary is-medium">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="title">
+    <section className="hero is-primary is-medium">
+      <div className="hero-body">
+        <div className="container has-text-centered">
+          <h1 className="title">
             And you, when will you begin that long journey into yourself?
           </h1>
-          <h2 class="subtitle is-italic">- Rumi</h2>
+          <h2 className="subtitle is-italic">- Rumi</h2>
         </div>
       </div>
     </section>

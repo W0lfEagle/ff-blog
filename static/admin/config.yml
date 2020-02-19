@@ -142,6 +142,7 @@ collections:
               widget: "hidden",
               default: "coaching-page",
             }
+          - { label: Cover Image, name: cover_image, widget: image }
           - {
               label: "Heading and content",
               name: "heading_and_content",
@@ -162,6 +163,17 @@ collections:
                         },
                       ],
                   },
+                ],
+            }
+          - {
+              label: "Packages",
+              name: "packages",
+              widget: "list",
+              fields:
+                [
+                  { label: "Heading", name: "heading", widget: "string" },
+                  { label: "Content", name: "content", widget: "string" },
+                  { label: Image, name: image, widget: image },
                 ],
             }
 
