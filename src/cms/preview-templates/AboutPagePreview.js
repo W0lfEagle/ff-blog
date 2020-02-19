@@ -11,6 +11,8 @@ const AboutPagePreview = ({ entry, widgetFor }) => {
         title1={data.title1}
         title2={data.title2}
         content={widgetFor("body")}
+        image1={data.image1}
+        image2={data.image2}
         myJourney={data.myJourney}
       />
     );

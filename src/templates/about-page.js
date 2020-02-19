@@ -3,11 +3,14 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const AboutPageTemplate = ({
   title1,
   title2,
   content,
+  image1,
+  image2,
   myJourney,
   contentComponent
 }) => {
@@ -30,7 +33,11 @@ export const AboutPageTemplate = ({
             </div>
             <div className="column is-6">
               <figure className="image image is-5by4">
-                <img src="https://bulma.io/images/placeholders/256x256.png"></img>
+                {image1 ? (
+                  <PreviewCompatibleImage imageInfo={{ image: image1 }} />
+                ) : (
+                  <img src="https://bulma.io/images/placeholders/256x256.png"></img>
+                )}
               </figure>
               <div className="column is-10 is-offset-1">
                 <div className="card contact-card">
@@ -55,7 +62,11 @@ export const AboutPageTemplate = ({
           <div className="columns">
             <div className="column is-6">
               <figure className="image image is-5by4">
-                <img src="https://bulma.io/images/placeholders/256x256.png"></img>
+                {image2 ? (
+                  <PreviewCompatibleImage imageInfo={{ image: image2 }} />
+                ) : (
+                  <img src="https://bulma.io/images/placeholders/256x256.png"></img>
+                )}
               </figure>
             </div>
             <div className="column is-6">
@@ -87,6 +98,8 @@ AboutPageTemplate.propTypes = {
     heading: PropTypes.string,
     steps: PropTypes.arrayOf(PropTypes.shape({ step: PropTypes.string }))
   }),
+  image1: PropTypes.object,
+  image2: PropTypes.object,
   contentComponent: PropTypes.func
 };
 
@@ -100,6 +113,8 @@ const AboutPage = ({ data }) => {
         title1={post.frontmatter.title1}
         title2={post.frontmatter.title2}
         content={post.html}
+        image1={post.image1}
+        image2={post.image2}
         myJourney={post.frontmatter.myJourney}
       />
     </Layout>
@@ -113,9 +128,9 @@ AboutPage.propTypes = {
 export default AboutPage;
 
 export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+  query AboutPage {
     ...LayoutFragment
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
       html
       frontmatter {
         title1
@@ -124,6 +139,20 @@ export const aboutPageQuery = graphql`
           heading
           steps {
             step
+          }
+        }
+        image1 {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image2 {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }

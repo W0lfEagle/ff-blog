@@ -111,6 +111,8 @@ collections:
           - { label: "Title1", name: "title1", widget: "string" }
           - { label: "Title2", name: "title2", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+          - { label: Image 1, name: image1, widget: image }
+          - { label: Image 2, name: image2, widget: image }
           - {
               label: My Journey,
               name: myJourney,
