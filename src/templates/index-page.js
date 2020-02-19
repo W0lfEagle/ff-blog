@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
+// import Features from "../components/Features";
+// import BlogRoll from "../components/BlogRoll";
 
 export const IndexPageTemplate = ({
   image,
@@ -29,78 +29,93 @@ export const IndexPageTemplate = ({
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
+        })`
       }}
     >
+      {/* <div className="section"> */}
       <div className="container is-fluid">
         <div className="columns">
-          {/* <div className="level-left"> */}
-          <div className="column is-4 is-offset-1">
+          <div className="column is-5">
             <h1
-              className="has-text-weight-bold is-size-3 has-text-centered"
+              className="has-text-weight-bold is-size-2 has-text-centered"
               style={{
                 color: "white",
-                lineHeight: "1.5",
-                padding: "0.25em"
+                lineHeight: "1.5"
+                // padding: "0.25em"
               }}
             >
               {title}
             </h1>
-            <h1
-              className="has-text-weight-bold is-size-4 is-italic has-text-centered"
-              style={{
-                color: "white",
-                lineHeight: "1.4",
-                padding: "0.25em"
-              }}
-            >
-              {subheading}
+            <h1 className="has-text-weight-bold has-text-white is-size-3 has-text-centered">
+              {/* {subheading} */}
+              <span className="is-italic">Explore. Navigate. Create.</span>
+              <br />
+              <span>Thrive through transition.</span>
             </h1>
-            {/* </div> */}
           </div>
+          {/* </div> */}
         </div>
       </div>
     </div>
     <section className="section">
       <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-6">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title has-text-info">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle is-italic has-text-info">
-                      {mainpitch.description}
-                    </h3>
-                  </div>
-                </div>
-                {/* <p className="has-text-justified">{description}</p> */}
-                <p className="has-text-justified">
-                  Through one-to-one coaching packages delivered online or
-                  face-to-face in east London, my goal is to help clients
-                  mindfully navigate change or intentionally create change in
-                  their lives.
-                </p>
-                <p className="has-text-justified">
-                  My work is steeped in a gentle sense of compassionate enquiry,
-                  kind curiosity, empathy and humor.{" "}
-                </p>
-                <p className="has-text-justified">
-                  With an ICF accredited diploma in Transformational Coaching, I
-                  take a holistic, integrative approach to coaching, as a method
-                  to explore your inner landscape and create space for you to
-                  more fully understand yourself.
-                </p>
-                <p className="has-text-justified">
-                  Drop me a line if this sounds like you. Our first call is free
-                  and a wonderful place to get a taste for coaching without any
-                  commitment.
-                </p>
+        {/* <div className="section"> */}
+        <div className="columns">
+          <div className="column is-6">
+            <div className="content">
+              <div className="tile">
+                <h1 className="title has-text-info">{mainpitch.title}</h1>
+              </div>
+              <div className="tile">
+                <h3 className="subtitle is-italic has-text-info">
+                  {mainpitch.description}
+                </h3>
+              </div>
+            </div>
+            <div className="content">
+              {/* <p className="has-text-justified">{description}</p> */}
+              <p className="has-text-justified">
+                Through one-to-one coaching packages delivered online or
+                face-to-face in east London, my goal is to help clients
+                mindfully navigate change or intentionally create change in
+                their lives.
+              </p>
+              <p className="has-text-justified">
+                My work is steeped in a gentle sense of compassionate enquiry,
+                kind curiosity, empathy and humor.{" "}
+              </p>
+              <p className="has-text-justified">
+                With an ICF accredited diploma in Transformational Coaching, I
+                take a holistic, integrative approach to coaching, as a method
+                to explore your inner landscape and create space for you to more
+                fully understand yourself.
+              </p>
+              <p className="has-text-justified">
+                Drop me a line if this sounds like you. Our first call is free
+                and a wonderful place to get a taste for coaching without any
+                commitment.
+              </p>
+            </div>
+          </div>
+          {/* </div> */}
+          <div className="column is-4 is-offset-1 ">
+            <div className="content">
+              <div className="tile">
+                <h1 className="title has-text-primary has-text-centered">
+                  Let’s connect, have a chat and dream about what’s possible.
+                </h1>
+              </div>
+            </div>
+            <div className="card contact-card">
+              <div className="card-content has-text-centered">
+                <h2 className="is-size-4 has-text-centered has-text-primary">
+                  Start your journey with a free coaching session.
+                </h2>
+              </div>
+              <div className="card-content">
+                <button class="button is-medium is-fullwidth is-primary">
+                  Start your journey
+                </button>
               </div>
             </div>
           </div>
@@ -232,13 +247,13 @@ export const pageQuery = graphql`
         description
         intro {
           blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            # image {
+            #   childImageSharp {
+            #     fluid(maxWidth: 240, quality: 64) {
+            #       ...GatsbyImageSharpFluid
+            #     }
+            #   }
+            # }
             text
           }
           heading
