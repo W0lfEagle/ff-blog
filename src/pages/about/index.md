@@ -3,7 +3,7 @@ templateKey: about-page
 title1: Hello!
 title2: I'm Felicity.
 image1: /img/20190723_152417.jpg
-image2: /img/20200201_145750.jpg
+image2: /img/20200125_154210.jpg
 myJourney:
   heading: Some of my stops along the way...
   steps:
