@@ -67,7 +67,11 @@ export const NavbarTemplate = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-end has-text-centered">
-              {this.props.data.menuItems.map(menuItem => (
+              {/* {this.props.data.menuItems.map(menuItem => ( */}
+              {[
+                { linkURL: "/about/", label: "About Me" },
+                { linkURL: "/coaching/", label: "Coaching" }
+              ].map(menuItem => (
                 <Link className="navbar-item" to={menuItem.linkURL}>
                   {menuItem.label}
                 </Link>
