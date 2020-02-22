@@ -2,8 +2,8 @@
 templateKey: about-page
 title1: Hello!
 title2: I'm Felicity.
-image1: /img/ff-face-4-google-photos.jpg
-image2: /img/ff-face-3-google-photos.jpg
+image1: /img/ff-face-4-google-photos-square.jpg
+image2: /img/ff-face-3-google-photos-square.jpg
 myJourney:
   heading: Some of my stops along the way...
   steps:
