@@ -50,31 +50,35 @@ export const IndexPageTemplate = ({
       <div className="container">
         <div className="columns">
           <div className="column is-6">
-            <div className="content">
-              <div className="tile">
-                <h1 className="title has-text-info">{mainpitch.title}</h1>
+            <div className="section">
+              <div className="content">
+                <div className="tile">
+                  <h1 className="title has-text-info">{mainpitch.title}</h1>
+                </div>
+                <div className="tile">
+                  <h3 className="subtitle is-italic has-text-info">
+                    {mainpitch.description}
+                  </h3>
+                </div>
               </div>
-              <div className="tile">
-                <h3 className="subtitle is-italic has-text-info">
-                  {mainpitch.description}
-                </h3>
+              <div className="content">
+                {pageContent.map(content => (
+                  <p key={content.paragraph} className="has-text-justified">
+                    {content.paragraph}
+                  </p>
+                ))}
               </div>
-            </div>
-            <div className="content">
-              {pageContent.map(content => (
-                <p key={content.paragraph} className="has-text-justified">
-                  {content.paragraph}
-                </p>
-              ))}
             </div>
           </div>
 
           <div className="column is-4 is-offset-1 ">
-            <div className="content">
-              <div className="tile">
-                <h1 className="title has-text-primary has-text-centered">
-                  {salesPitch}
-                </h1>
+            <div className="section">
+              <div className="content">
+                <div className="tile">
+                  <h1 className="title has-text-primary has-text-centered">
+                    {salesPitch}
+                  </h1>
+                </div>
               </div>
             </div>
 

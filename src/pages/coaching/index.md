@@ -1,6 +1,6 @@
 ---
 templateKey: coaching-page
-cover_image: /img/20200201_145750.jpg
+cover_image: /img/ff-face-2-google-photos.jpg
 heading_and_content:
   - content:
       - paragraph: >-
