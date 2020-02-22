@@ -54,9 +54,9 @@ export const IndexPageTemplate = ({
       </div>
     </div>
     <section className="section">
-      <div className="container">
+      <div className="container is-fluid">
         <div className="columns">
-          <div className="column is-6">
+          <div className="column is-6-tablet is-5-widescreen is-offset-1-widescreen">
             <div className="section">
               <div className="content">
                 <div className="tile">
@@ -78,7 +78,7 @@ export const IndexPageTemplate = ({
             </div>
           </div>
 
-          <div className="column is-4 is-offset-1 ">
+          <div className="column is-6-tablet is-5-widescreen">
             <div className="section">
               <div className="content">
                 <div className="tile">
