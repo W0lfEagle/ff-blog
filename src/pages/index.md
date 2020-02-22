@@ -9,6 +9,7 @@ mainpitch:
     I help people know, trust and express themselves in times of transition to
     thrive with intention.
   title: Hello! I’m Felicity.
+image2: /img/ff-face-3-google-photos-square.jpg
 pageContent:
   - paragraph: >-
       Through one-to-one coaching packages delivered online or face-to-face in
@@ -25,7 +26,7 @@ pageContent:
   - paragraph: >-
       Drop me a line if this sounds like you. Our first call is free and a
       wonderful place to get a taste for coaching without any commitment.
-salesPitch: "Let’s connect, have a chat and dream about what’s possible."
+salesPitch: 'Let’s connect, have a chat and dream about what’s possible.'
 quote1:
   by: Henri Bergson
   quote: >-
@@ -56,5 +57,6 @@ testimonials:
       went by so quickly!
 quote2:
   by: Rumi
-  quote: "And you, when will you begin that long journey into yourself?"
+  quote: 'And you, when will you begin that long journey into yourself?'
 ---
+
