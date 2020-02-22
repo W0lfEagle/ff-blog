@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Harness the power of change
+title: Harness the power of change.
 heroTitle2: Explore. Navigate. Create.
 heroTitle3: Thrive through transition.
 image: /img/felicity-face-1.jpg
@@ -25,7 +25,7 @@ pageContent:
   - paragraph: >-
       Drop me a line if this sounds like you. Our first call is free and a
       wonderful place to get a taste for coaching without any commitment.
-salesPitch: 'Let’s connect, have a chat and dream about what’s possible.'
+salesPitch: "Let’s connect, have a chat and dream about what’s possible."
 quote1:
   by: Henri Bergson
   quote: >-
@@ -56,6 +56,5 @@ testimonials:
       went by so quickly!
 quote2:
   by: Rumi
-  quote: 'And you, when will you begin that long journey into yourself?'
+  quote: "And you, when will you begin that long journey into yourself?"
 ---
-
