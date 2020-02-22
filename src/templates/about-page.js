@@ -32,24 +32,22 @@ export const AboutPageTemplate = ({
               </div>
             </div>
             <div className="column is-6">
-              <figure className="image image is-5by4">
-                {image1 ? (
+              <div className="section">
+                <figure className="is-square">
                   <PreviewCompatibleImage imageInfo={{ image: image1 }} />
-                ) : (
-                  <img src="https://bulma.io/images/placeholders/256x256.png"></img>
-                )}
-              </figure>
-              <div className="column is-10 is-offset-1">
-                <div className="card contact-card">
-                  <div className="card-content has-text-centered">
-                    <h2 className="is-size-4 has-text-centered has-text-primary">
-                      Start your journey with a free coaching session.
-                    </h2>
-                  </div>
-                  <div className="card-content">
-                    <button className="button is-medium is-fullwidth is-primary">
-                      Start your journey
-                    </button>
+                </figure>
+                <div className="column is-10 is-offset-1">
+                  <div className="card contact-card">
+                    <div className="card-content has-text-centered">
+                      <h2 className="is-size-4 has-text-centered has-text-primary">
+                        Start your journey with a free coaching session.
+                      </h2>
+                    </div>
+                    <div className="card-content">
+                      <button className="button is-medium is-fullwidth is-primary">
+                        Start your journey
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -61,26 +59,26 @@ export const AboutPageTemplate = ({
         <div className="container">
           <div className="columns">
             <div className="column is-6">
-              <figure className="image image is-5by4">
-                {image2 ? (
+              <div className="section">
+                <figure className="is-square">
                   <PreviewCompatibleImage imageInfo={{ image: image2 }} />
-                ) : (
-                  <img src="https://bulma.io/images/placeholders/256x256.png"></img>
-                )}
-              </figure>
+                </figure>
+              </div>
             </div>
             <div className="column is-6">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
-                {/* {title} */}
-                {myJourney.heading}
-              </h2>
-              {/* <PageContent className="content" content={content} /> */}
-              <div className="content">
-                <ul>
-                  {myJourney.steps.map(step => (
-                    <li key={step.step}>{step.step}</li>
-                  ))}
-                </ul>
+              <div className="section">
+                <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
+                  {/* {title} */}
+                  {myJourney.heading}
+                </h2>
+                {/* <PageContent className="content" content={content} /> */}
+                <div className="content">
+                  <ul>
+                    {myJourney.steps.map(step => (
+                      <li key={step.step}>{step.step}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -113,8 +111,8 @@ const AboutPage = ({ data }) => {
         title1={post.frontmatter.title1}
         title2={post.frontmatter.title2}
         content={post.html}
-        image1={post.image1}
-        image2={post.image2}
+        image1={post.frontmatter.image1}
+        image2={post.frontmatter.image2}
         myJourney={post.frontmatter.myJourney}
       />
     </Layout>
@@ -143,14 +141,14 @@ export const aboutPageQuery = graphql`
         }
         image1 {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 480, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         image2 {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 480, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
