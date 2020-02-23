@@ -18,21 +18,28 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <div
-      className="full-width-image margin-top-0"
+      className="full-width-image margin-top-0 is-relative"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`
       }}
     >
-      <div className="container is-fluid">
+      <div
+        className="container is-fluid"
+        style={{
+          position: "absolute",
+          bottom: "10rem"
+        }}
+      >
         <div className="columns">
-          <div className="column is-5">
+          <div className="column is-6-tablet is-4-desktop is-offset-1-desktop">
             <h1
               className="has-text-weight-bold is-size-2 has-text-centered"
               style={{
                 color: "white",
-                lineHeight: "1.5"
+                lineHeight: "1.5",
+                marginBottom: "3rem"
               }}
             >
               {title}
@@ -47,9 +54,9 @@ export const IndexPageTemplate = ({
       </div>
     </div>
     <section className="section">
-      <div className="container">
+      <div className="container is-fluid">
         <div className="columns">
-          <div className="column is-6">
+          <div className="column is-6-tablet is-5-widescreen is-offset-1-widescreen">
             <div className="section">
               <div className="content">
                 <div className="tile">
@@ -71,7 +78,7 @@ export const IndexPageTemplate = ({
             </div>
           </div>
 
-          <div className="column is-4 is-offset-1 ">
+          <div className="column is-6-tablet is-5-widescreen">
             <div className="section">
               <div className="content">
                 <div className="tile">

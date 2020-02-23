@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Harness the power of change
+title: Harness the power of change.
 heroTitle2: Explore. Navigate. Create.
 heroTitle3: Thrive through transition.
 image: /img/felicity-face-1.jpg
@@ -9,6 +9,7 @@ mainpitch:
     I help people know, trust and express themselves in times of transition to
     thrive with intention.
   title: Hello! I’m Felicity.
+image2: /img/ff-face-3-google-photos-square.jpg
 pageContent:
   - paragraph: >-
       Through one-to-one coaching packages delivered online or face-to-face in
