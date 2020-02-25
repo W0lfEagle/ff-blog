@@ -3,13 +3,12 @@ templateKey: index-page
 title: Harness the power of change.
 heroTitle2: Explore. Navigate. Create.
 heroTitle3: Thrive through transition.
-image: /img/felicity-face-1.jpg
+image: /img/IMG_2330.JPG
 mainpitch:
   description: >-
     I help people know, trust and express themselves in times of transition to
     thrive with intention.
   title: Hello! I’m Felicity.
-image2: /img/ff-face-3-google-photos-square.jpg
 pageContent:
   - paragraph: >-
       Through one-to-one coaching packages delivered online or face-to-face in
@@ -33,16 +32,6 @@ quote1:
     To exist is to change, to change is to mature, to mature is to go on
     creating oneself endlessly.
 testimonials:
-  - by: Leah
-    quote: >-
-      I would like to send you a huge heartfelt thank you for your wonderful
-      course. I started my blog only a few months before the course began so I
-      was a complete novice and not feeling all that confident. All the ideas
-      and prompts and encouragement for revealing our true selves in a voice
-      authentic to us, plus the wonderful community of creative women, have made
-      this not only a truly memorable and rich experience, but also a very
-      practically useful one for establishing our own unique web presence. Thank
-      you for so generously sharing yourself with us!
   - by: Johnny
     quote: >-
       Blogging from the Heart turned out to be one of my favorite e-courses.
@@ -55,6 +44,16 @@ testimonials:
       to the pdf and will definitely be suggesting this class to any blogger I
       know who wants to take things to the next level. I can’t believe it all
       went by so quickly!
+  - by: Leah
+    quote: >-
+      I would like to send you a huge heartfelt thank you for your wonderful
+      course. I started my blog only a few months before the course began so I
+      was a complete novice and not feeling all that confident. All the ideas
+      and prompts and encouragement for revealing our true selves in a voice
+      authentic to us, plus the wonderful community of creative women, have made
+      this not only a truly memorable and rich experience, but also a very
+      practically useful one for establishing our own unique web presence. Thank
+      you for so generously sharing yourself with us!
 quote2:
   by: Rumi
   quote: 'And you, when will you begin that long journey into yourself?'
