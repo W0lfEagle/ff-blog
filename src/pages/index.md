@@ -9,6 +9,7 @@ mainpitch:
     I help people know, trust and express themselves in times of transition to
     thrive with intention.
   title: Hello! I’m Felicity.
+image2: /img/felicity-face-1-square.jpg
 pageContent:
   - paragraph: >-
       Through one-to-one coaching packages delivered online or face-to-face in
