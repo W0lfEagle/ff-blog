@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const IndexPageTemplate = ({
   image,
@@ -10,6 +11,7 @@ export const IndexPageTemplate = ({
   heroTitle2,
   heroTitle3,
   mainpitch,
+  image2,
   pageContent,
   salesPitch,
   quote1,
@@ -29,25 +31,29 @@ export const IndexPageTemplate = ({
         className="container is-fluid"
         style={{
           position: "absolute",
-          bottom: "10rem"
+          top: "13.5rem"
         }}
       >
+        {/* is-6-tablet is-4-desktop is-offset-1-desktop */}
         <div className="columns">
-          <div className="column is-6-tablet is-4-desktop is-offset-1-desktop">
+          <div className="column">
             <h1
-              className="has-text-weight-bold is-size-2 has-text-centered"
+              className="has-text-weight-bold is-size-1 has-text-centered"
               style={{
                 color: "white",
                 lineHeight: "1.5",
-                marginBottom: "3rem"
+                // marginBottom: "3rem",
+                fontWeight: "bolder"
               }}
             >
               {title}
             </h1>
-            <h1 className="has-text-weight-bold has-text-white is-size-3 has-text-centered">
-              <span className="is-italic">{heroTitle2}</span>
-              <br />
-              <span>{heroTitle3}</span>
+            <h1 className="has-text-weight-bold has-text-white is-size-2 is-italic has-text-centered">
+              <span>{heroTitle2}</span>
+              {/* <br /> */}
+            </h1>
+            <h1 className="has-text-weight-bold has-text-white is-size-2 has-text-centered">
+              {heroTitle3}
             </h1>
           </div>
         </div>
@@ -82,9 +88,9 @@ export const IndexPageTemplate = ({
             <div className="section">
               <div className="content">
                 <div className="tile">
-                  <h1 className="title has-text-primary has-text-centered">
+                  <h2 className="title has-text-primary has-text-centered">
                     {salesPitch}
-                  </h1>
+                  </h2>
                 </div>
               </div>
             </div>
@@ -103,6 +109,9 @@ export const IndexPageTemplate = ({
               </div>
             </div>
             {/* ------ */}
+            <figure className="is-square">
+              <PreviewCompatibleImage imageInfo={{ image: image2 }} />
+            </figure>
           </div>
         </div>
       </div>
@@ -165,6 +174,7 @@ IndexPageTemplate.propTypes = {
   ),
   mainpitch: PropTypes.object,
   salesPitch: PropTypes.string,
+  image2: PropTypes.object,
   quote1: PropTypes.shape({
     quote: PropTypes.string,
     by: PropTypes.string
@@ -192,6 +202,7 @@ const IndexPage = ({ data }) => {
         heroTitle2={frontmatter.heroTitle2}
         heroTitle3={frontmatter.heroTitle3}
         mainpitch={frontmatter.mainpitch}
+        image2={frontmatter.image2}
         pageContent={frontmatter.pageContent}
         salesPitch={frontmatter.salesPitch}
         quote1={frontmatter.quote1}
@@ -230,6 +241,13 @@ export const pageQuery = graphql`
         mainpitch {
           title
           description
+        }
+        image2 {
+          childImageSharp {
+            fluid(maxWidth: 480, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
         pageContent {
           paragraph

@@ -70,7 +70,7 @@ module.exports = {
       options: {
         fonts: [
           `Calligraffitti`,
-          `Playfair Display`, // you can also specify font weights and styles
+          `Playfair Display\:400,800,800i,900,900i`, // you can also specify font weights and styles
           `Roboto`
         ],
         display: "swap"
