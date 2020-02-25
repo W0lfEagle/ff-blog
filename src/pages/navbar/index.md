@@ -7,4 +7,8 @@ menuItems:
   - label: Coaching
     linkType: internal
     linkURL: /coaching/
+  - label: Kind Words
+    linkType: internal
+    linkURL: /kind-words/
 ---
+
