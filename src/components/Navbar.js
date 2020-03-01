@@ -39,7 +39,7 @@ export const NavbarTemplate = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container is-fluid">
+        <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
               <img
@@ -70,7 +70,8 @@ export const NavbarTemplate = class extends React.Component {
               {/* {this.props.data.menuItems.map(menuItem => ( */}
               {[
                 { linkURL: "/about/", label: "About Me" },
-                { linkURL: "/coaching/", label: "Coaching" }
+                { linkURL: "/coaching/", label: "Coaching" },
+                { linkURL: "/kind-words/", label: "Kind Words" }
               ].map(menuItem => (
                 <Link
                   className="navbar-item is-family-secondary"

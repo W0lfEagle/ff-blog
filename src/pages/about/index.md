@@ -1,9 +1,12 @@
 ---
 templateKey: about-page
-title1: Hello!
-title2: I'm Felicity.
-image1: /img/ff-face-4-google-photos-square.jpg
-image2: /img/ff-face-3-google-photos-square.jpg
+title1: 'Hi there,'
+title2: I'm so glad you're here...
+image1: /img/ff-face-3-google-photos.jpg
+quote1:
+  by: RUMI
+  quote: >-
+    Try not to resist the changes that come your way. Instead let life live through you. And do not worry that your life is turning upside down. how do you know that the side you are used to is better than the one to come?
 myJourney:
   heading: Some of my stops along the way...
   steps:
@@ -25,6 +28,4 @@ Through one-to-one coaching packages delivered online or face-to-face in east Lo
 
 The twists and turns of my life over the past 10 years reflect how I continually changed my external circumstances in a search for fulfillment without first turning my gaze inwards. As I now step further into my own soul exploration, my passion is helping others to start asking themselves the questions that will create the inner shifts to thrive through transition and change.
 
-Drop me a line if this sounds like you. I’d love to have a chat about coaching or hear about your own experiences navigating change. 
-
-I’m so glad you’re here.
+Drop me a line if this sounds like you. I’d love to have a chat about coaching or hear about your own experiences navigating change.
