@@ -36,10 +36,12 @@ export const AboutPageTemplate = ({
                 <figure className="is-square">
                   <PreviewCompatibleImage imageInfo={{ image: image1 }} />
                 </figure>
+              </div>
+              <div className="section">
                 <div className="column is-10 is-offset-1">
                   <div className="card contact-card">
                     <div className="card-content has-text-centered">
-                      <h2 className="is-size-4 has-text-centered has-text-primary">
+                      <h2 className="is-size-4 has-text-centered">
                         Start your journey with a free coaching session.
                       </h2>
                     </div>

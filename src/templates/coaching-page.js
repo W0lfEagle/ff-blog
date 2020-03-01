@@ -14,7 +14,7 @@ export const CoachingPageTemplate = ({
   const PageContent = contentComponent || Content;
   return (
     <div>
-      <div
+      {/* <div
         className="full-width-image margin-top-0"
         style={{
           backgroundImage: `url(${
@@ -23,7 +23,7 @@ export const CoachingPageTemplate = ({
               : coverImage
           })`
         }}
-      ></div>
+      ></div> */}
       <div className="section">
         <div className="container">
           <div className="columns is-vcentered">
@@ -42,10 +42,15 @@ export const CoachingPageTemplate = ({
               </div>
             </div>
             <div className="column is-6">
+              <div className="section">
+                <figure className="is-square">
+                  <PreviewCompatibleImage imageInfo={{ image: coverImage }} />
+                </figure>
+              </div>
               <div className="column is-10 is-offset-1">
                 <div className="card contact-card">
                   <div className="card-content has-text-centered">
-                    <h2 className="is-size-4 has-text-centered has-text-primary">
+                    <h2 className="is-size-4 has-text-centered">
                       Start your journey with a free coaching session.
                     </h2>
                   </div>

@@ -59,8 +59,8 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </div>
-    <section className="section">
-      <div className="container is-fluid">
+    <div className="section">
+      <div className="container">
         <div className="columns">
           <div className="column is-6-tablet is-5-widescreen is-offset-1-widescreen">
             <div className="section">
@@ -69,7 +69,7 @@ export const IndexPageTemplate = ({
                   <h1 className="title has-text-info">{mainpitch.title}</h1>
                 </div>
                 <div className="tile">
-                  <h3 className="subtitle is-italic has-text-info">
+                  <h3 className="subtitle has-text-info">
                     {mainpitch.description}
                   </h3>
                 </div>
@@ -85,6 +85,13 @@ export const IndexPageTemplate = ({
           </div>
 
           <div className="column is-6-tablet is-5-widescreen">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                <figure className="is-square">
+                  <PreviewCompatibleImage imageInfo={{ image: image2 }} />
+                </figure>
+              </div>
+            </div>
             <div className="section">
               <div className="content">
                 <div className="tile">
@@ -93,29 +100,26 @@ export const IndexPageTemplate = ({
                   </h2>
                 </div>
               </div>
+              <button className="button is-medium is-fullwidth is-primary">
+                Start your journey
+              </button>
             </div>
 
             {/* TODO - Contact Card Component */}
-            <div className="card contact-card">
+            {/* <div className="card contact-card">
               <div className="card-content has-text-centered">
                 <h2 className="is-size-4 has-text-centered has-text-primary">
                   Start your journey with a free coaching session.
                 </h2>
               </div>
               <div className="card-content">
-                <button className="button is-medium is-fullwidth is-primary">
-                  Start your journey
-                </button>
               </div>
-            </div>
+            </div> */}
             {/* ------ */}
-            <figure className="is-square">
-              <PreviewCompatibleImage imageInfo={{ image: image2 }} />
-            </figure>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     {/* QUOTE 1 */}
     <section className="hero is-danger is-medium">
