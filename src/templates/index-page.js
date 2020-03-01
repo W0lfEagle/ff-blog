@@ -20,25 +20,19 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <div
-      className="full-width-image margin-top-0 is-relative"
+      className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`
       }}
     >
-      <div
-        className="container is-fluid"
-        style={{
-          position: "absolute",
-          top: "13.5rem"
-        }}
-      >
+      <div className="container is-fluid">
         {/* is-6-tablet is-4-desktop is-offset-1-desktop */}
         <div className="columns">
           <div className="column">
             <h1
-              className="has-text-weight-bold is-size-1 has-text-centered"
+              className="has-text-weight-bold is-size-1 is-size-2-mobile has-text-centered"
               style={{
                 color: "white",
                 lineHeight: "1.5",
@@ -48,13 +42,22 @@ export const IndexPageTemplate = ({
             >
               {title}
             </h1>
-            <h1 className="has-text-weight-bold has-text-white is-size-2 is-italic has-text-centered">
+            <h1 className="has-text-weight-bold has-text-white is-size-2 is-size-3-mobile is-italic has-text-centered">
               <span>{heroTitle2}</span>
               {/* <br /> */}
             </h1>
-            <h1 className="has-text-weight-bold has-text-white is-size-2 has-text-centered">
+            <h1 className="has-text-weight-bold has-text-white is-size-2 is-size-3-mobile has-text-centered">
               {heroTitle3}
             </h1>
+
+            <div
+              class="buttons has-addons is-centered"
+              style={{ marginTop: "2rem" }}
+            >
+              <button className="button is-medium is-primary">
+                Start your journey
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -87,7 +90,7 @@ export const IndexPageTemplate = ({
           <div className="column is-6-tablet is-5-widescreen">
             <div className="columns">
               <div className="column is-10 is-offset-1">
-                <figure className="is-square">
+                <figure className="image">
                   <PreviewCompatibleImage imageInfo={{ image: image2 }} />
                 </figure>
               </div>
@@ -101,7 +104,7 @@ export const IndexPageTemplate = ({
                 </div>
               </div>
               <button className="button is-medium is-fullwidth is-primary">
-                Start your journey
+                Schedule a call
               </button>
             </div>
 

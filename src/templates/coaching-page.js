@@ -46,7 +46,7 @@ export const CoachingPageTemplate = ({
             </div>
             <div className="column is-6">
               <div className="section">
-                <figure className="is-square">
+                <figure className="image">
                   <PreviewCompatibleImage imageInfo={{ image: coverImage }} />
                 </figure>
               </div>
@@ -89,12 +89,12 @@ export const CoachingPageTemplate = ({
               </h2>
               <p style={{ marginBottom: "2rem" }}>{detailsDescription}</p>
               {packages.map(pack => (
-                <div className="columns" key={pack.heading}>
+                <div className="columns is-mobile" key={pack.heading}>
                   <div className="column is-2">
-                    <figure className="is-square">
+                    <figure className="image is-48x48">
                       <PreviewCompatibleImage
                         imageInfo={{ image: pack.image }}
-                        // style={{ maxWidth: "50px", maxHeight: "50px" }}
+                        style={{ maxWidth: "50px", maxHeight: "50px" }}
                       />
                     </figure>
                   </div>
