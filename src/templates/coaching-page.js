@@ -64,6 +64,7 @@ export const CoachingPageTemplate = ({
             </div>
           </div>
         </div>
+
         <div className="container">
           <div className="section">
             {packages.map(pack => (

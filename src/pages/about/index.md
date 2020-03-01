@@ -2,8 +2,11 @@
 templateKey: about-page
 title1: 'Hi there,'
 title2: I'm so glad you're here...
-image1: /img/ff-face-4-google-photos-square.jpg
-image2: /img/ff-face-3-google-photos-square.jpg
+image1: /img/ff-face-3-google-photos.jpg
+quote1:
+  by: RUMI
+  quote: >-
+    Try not to resist the changes that come your way. Instead let life live through you. And do not worry that your life is turning upside down. how do you know that the side you are used to is better than the one to come?
 myJourney:
   heading: Some of my stops along the way...
   steps:

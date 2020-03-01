@@ -122,7 +122,7 @@ export const IndexPageTemplate = ({
     </div>
 
     {/* QUOTE 1 */}
-    <section className="hero is-danger is-medium">
+    <section className="hero is-danger">
       <div className="hero-body">
         <div className="container has-text-centered">
           <h1 className="title">{quote1.quote}</h1>
@@ -155,7 +155,7 @@ export const IndexPageTemplate = ({
     </section>
     {/* ------ */}
 
-    <section className="hero is-primary is-medium">
+    <section className="hero is-primary">
       <div className="hero-body">
         <div className="container has-text-centered">
           <h1 className="title">{quote2.quote}</h1>

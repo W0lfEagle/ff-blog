@@ -10,7 +10,8 @@ export const AboutPageTemplate = ({
   title2,
   content,
   image1,
-  image2,
+  // image2,
+  quote1,
   myJourney,
   contentComponent
 }) => {
@@ -21,22 +22,61 @@ export const AboutPageTemplate = ({
       <div className="section">
         <div className="container">
           <div className="columns">
-            <div className="column is-6">
+            <div className="column is-8 is-offset-2">
               <div className="section">
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
                   {title1}
                   <br />
                   {title2}
                 </h2>
-                <PageContent className="content" content={content} />
+                <PageContent
+                  className="content has-text-justified"
+                  content={content}
+                />
+                <h3 className="signature">xo Felicity</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Image Banner */}
+      <div
+        className="full-width-image margin-top-0"
+        style={{
+          backgroundImage: `url(${
+            !!image1.childImageSharp ? image1.childImageSharp.fluid.src : image1
+          })`,
+          maxHeight: "300px"
+        }}
+      ></div>
+      {/* ------ */}
+
+      <div className="section">
+        <div className="container">
+          <h1 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
+            {/* {title} */}
+            {myJourney.heading}
+          </h1>
+          <div className="columns">
+            <div className="column is-6">
+              <div className="section">
+                {/* <PageContent className="content" content={content} /> */}
+                <div className="content">
+                  <ul>
+                    {myJourney.steps.map(step => (
+                      <li key={step.step}>{step.step}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
             <div className="column is-6">
-              <div className="section">
+              {/* <div className="section">
                 <figure className="is-square">
                   <PreviewCompatibleImage imageInfo={{ image: image1 }} />
                 </figure>
-              </div>
+              </div> */}
               <div className="section">
                 <div className="column is-10 is-offset-1">
                   <div className="card contact-card">
@@ -57,35 +97,17 @@ export const AboutPageTemplate = ({
           </div>
         </div>
       </div>
-      <div className="section">
-        <div className="container">
-          <div className="columns">
-            <div className="column is-6">
-              <div className="section">
-                <figure className="is-square">
-                  <PreviewCompatibleImage imageInfo={{ image: image2 }} />
-                </figure>
-              </div>
-            </div>
-            <div className="column is-6">
-              <div className="section">
-                <h2 className="title is-size-3 has-text-weight-bold is-bold-light has-text-info">
-                  {/* {title} */}
-                  {myJourney.heading}
-                </h2>
-                {/* <PageContent className="content" content={content} /> */}
-                <div className="content">
-                  <ul>
-                    {myJourney.steps.map(step => (
-                      <li key={step.step}>{step.step}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+
+      {/* QUOTE 1 */}
+      <section className="hero is-primary">
+        <div className="hero-body">
+          <div className="container has-text-centered">
+            <h1 className="title">{quote1.quote}</h1>
+            <h2 className="subtitle is-italic">- {quote1.by}</h2>
           </div>
         </div>
-      </div>
+      </section>
+      {/* ------ */}
     </div>
   );
 };
@@ -99,8 +121,12 @@ AboutPageTemplate.propTypes = {
     steps: PropTypes.arrayOf(PropTypes.shape({ step: PropTypes.string }))
   }),
   image1: PropTypes.object,
-  image2: PropTypes.object,
-  contentComponent: PropTypes.func
+  // image2: PropTypes.object,
+  contentComponent: PropTypes.func,
+  quote1: PropTypes.shape({
+    quote: PropTypes.string,
+    by: PropTypes.string
+  })
 };
 
 const AboutPage = ({ data }) => {
@@ -114,8 +140,9 @@ const AboutPage = ({ data }) => {
         title2={post.frontmatter.title2}
         content={post.html}
         image1={post.frontmatter.image1}
-        image2={post.frontmatter.image2}
+        // image2={post.frontmatter.image2}
         myJourney={post.frontmatter.myJourney}
+        quote1={post.frontmatter.quote1}
       />
     </Layout>
   );
@@ -143,17 +170,21 @@ export const aboutPageQuery = graphql`
         }
         image1 {
           childImageSharp {
-            fluid(maxWidth: 480, quality: 100) {
+            fluid(maxWidth: 2400, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        image2 {
-          childImageSharp {
-            fluid(maxWidth: 480, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+        # image2 {
+        #   childImageSharp {
+        #     fluid(maxWidth: 480, quality: 100) {
+        #       ...GatsbyImageSharpFluid
+        #     }
+        #   }
+        # }
+        quote1 {
+          quote
+          by
         }
       }
     }
