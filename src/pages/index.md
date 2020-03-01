@@ -9,7 +9,6 @@ mainpitch:
     I help people know, trust and express themselves in times of transition to
     thrive with intention.
   title: Hello! I’m Felicity.
-image2: /img/felicity-face-1-square.jpg
 pageContent:
   - paragraph: >-
       Through one-to-one coaching packages delivered online or face-to-face in
@@ -33,28 +32,37 @@ quote1:
     To exist is to change, to change is to mature, to mature is to go on
     creating oneself endlessly.
 testimonials:
-  - by: Johnny
+  - by: Shae
     quote: >-
-      Blogging from the Heart turned out to be one of my favorite e-courses.
-      Thank you so much for putting it together! You’ve inspired me to finally
-      take the plunge and make my blog into the space I’ve always dreamed of.
-      Your design tips and writing prompts have helped me get through days where
-      inspiration wouldn’t flow freely and inspired me to reveal a little more
-      of myself in my writing. With your guidance my blog has finally become a
-      place for community. I couldn’t have asked for more! I’m looking forward
-      to the pdf and will definitely be suggesting this class to any blogger I
-      know who wants to take things to the next level. I can’t believe it all
-      went by so quickly!
-  - by: Leah
+      I started working with Felicity during a time in my life when I was
+      feeling stuck and wanted to start making some positive changes. I wasn’t
+      really sure if the coaching process would work for me. But Felicity was
+      incredibly easy to work with and made me feel comfortable to explore what
+      was possible. I really liked that she held a space for me to contemplate
+      my thoughts, feelings and beliefs. I found the coaching process helpful in
+      prompting me to take a creative approach to change and take actions to
+      create the change I want for myself.
+  - by: Liza
     quote: >-
-      I would like to send you a huge heartfelt thank you for your wonderful
-      course. I started my blog only a few months before the course began so I
-      was a complete novice and not feeling all that confident. All the ideas
-      and prompts and encouragement for revealing our true selves in a voice
-      authentic to us, plus the wonderful community of creative women, have made
-      this not only a truly memorable and rich experience, but also a very
-      practically useful one for establishing our own unique web presence. Thank
-      you for so generously sharing yourself with us!
+      Thank you, Felicity. I liked working with you a lot! Before we started
+      working together, I was feeling a lack of confidence, especially when
+      meeting new people. After only 6 sessions together, it’s difficult to 
+      choose one main benefit, as I had important insights in every session. In
+      our last session, I realised that one of my limiting beliefs has changed.
+      I identified this belief in our first session together and it has been
+      influencing me for years. Now I don’t believe it anymore!
+
+
+      No matter how I was feeling at the beginning of each session, I always
+      felt much more positive and inspired by the end. I really enjoyed our
+      sessions together.
+  - by: Richard
+    quote: >-
+      The main benefits I found were from you helping me voice the things out
+      loud which I subconsciously knew but had never verbalised. You were also
+      really good at leading me deeper to the root of any thoughts and beliefs
+      and thinking about where those things came from. Also you were really easy
+      to talk to which I liked and had a lovely tonality and gentleness.
 quote2:
   by: Rumi
   quote: 'And you, when will you begin that long journey into yourself?'
