@@ -86,7 +86,7 @@ export const AboutPageTemplate = ({
                     </div>
                     <div className="card-content">
                       <button className="button is-medium is-fullwidth is-primary">
-                        Start your journey
+                        Schedule a call
                       </button>
                     </div>
                   </div>

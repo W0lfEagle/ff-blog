@@ -59,7 +59,7 @@ export const CoachingPageTemplate = ({
                   </div>
                   <div className="card-content">
                     <button className="button is-medium is-fullwidth is-primary">
-                      Start your journey
+                      Schedule a call
                     </button>
                   </div>
                 </div>
@@ -91,7 +91,12 @@ export const CoachingPageTemplate = ({
               {packages.map(pack => (
                 <div className="columns" key={pack.heading}>
                   <div className="column is-2">
-                    <PreviewCompatibleImage imageInfo={{ image: pack.image }} />
+                    <figure className="is-square">
+                      <PreviewCompatibleImage
+                        imageInfo={{ image: pack.image }}
+                        // style={{ maxWidth: "50px", maxHeight: "50px" }}
+                      />
+                    </figure>
                   </div>
                   <div className="column is-10">
                     <div className="content">
