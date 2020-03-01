@@ -10,7 +10,6 @@ export const AboutPageTemplate = ({
   title2,
   content,
   image1,
-  // image2,
   quote1,
   myJourney,
   contentComponent
@@ -121,7 +120,6 @@ AboutPageTemplate.propTypes = {
     steps: PropTypes.arrayOf(PropTypes.shape({ step: PropTypes.string }))
   }),
   image1: PropTypes.object,
-  // image2: PropTypes.object,
   contentComponent: PropTypes.func,
   quote1: PropTypes.shape({
     quote: PropTypes.string,
@@ -140,7 +138,6 @@ const AboutPage = ({ data }) => {
         title2={post.frontmatter.title2}
         content={post.html}
         image1={post.frontmatter.image1}
-        // image2={post.frontmatter.image2}
         myJourney={post.frontmatter.myJourney}
         quote1={post.frontmatter.quote1}
       />
@@ -175,13 +172,6 @@ export const aboutPageQuery = graphql`
             }
           }
         }
-        # image2 {
-        #   childImageSharp {
-        #     fluid(maxWidth: 480, quality: 100) {
-        #       ...GatsbyImageSharpFluid
-        #     }
-        #   }
-        # }
         quote1 {
           quote
           by

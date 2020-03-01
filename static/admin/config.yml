@@ -113,7 +113,6 @@ collections:
           - { label: "Title2", name: "title2", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
           - { label: Image 1, name: image1, widget: image }
-          - { label: Image 2, name: image2, widget: image }
           - {
               label: My Journey,
               name: myJourney,
@@ -127,6 +126,16 @@ collections:
                     widget: list,
                     fields: [{ label: "Step", name: "step", widget: "text" }],
                   },
+                ],
+            }
+          - {
+              label: Quote 1,
+              name: quote1,
+              widget: object,
+              fields:
+                [
+                  { label: Quote, name: quote, widget: text },
+                  { label: By, name: by, widget: string },
                 ],
             }
       - file: "src/pages/coaching/index.md"
@@ -172,6 +181,26 @@ collections:
                   { label: "Content", name: "content", widget: "string" },
                   { label: Image, name: image, widget: image },
                 ],
+            }
+          - {
+              label: Quote 1,
+              name: quote1,
+              widget: object,
+              fields:
+                [
+                  { label: Quote, name: quote, widget: text },
+                  { label: By, name: by, widget: string },
+                ],
+            }
+          - {
+              label: "Details Heading",
+              name: "details_heading",
+              widget: "string",
+            }
+          - {
+              label: "Details Description",
+              name: "details_description",
+              widget: "string",
             }
 
   - name: "navbarAndFooter"

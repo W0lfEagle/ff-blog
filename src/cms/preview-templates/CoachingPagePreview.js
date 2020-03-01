@@ -3,19 +3,16 @@ import PropTypes from "prop-types";
 import { CoachingPageTemplate } from "../../templates/coaching-page";
 
 const CoachingPagePreview = ({ entry }) => {
-  const entryHc = entry.getIn(["data", "heading_and_content"]);
-  const hc = entryHc ? entryHc.toJS() : [];
-
-  const entryPackages = entry.getIn(["data", "packages"]);
-  const packages = entryPackages ? entryPackages.toJS() : [];
-
-  const coverImage = entry.getIn(["data", "cover_image"]);
+  const data = entry.getIn(["data"]).toJS();
 
   return (
     <CoachingPageTemplate
-      headingAndContent={hc}
-      packages={packages}
-      coverImage={coverImage}
+      headingAndContent={data.heading_and_content}
+      packages={data.packages}
+      coverImage={data.cover_image}
+      quote1={data.quote1}
+      detailsHeading={data.details_heading}
+      detailsDescription={data.details_description}
     />
   );
 };
