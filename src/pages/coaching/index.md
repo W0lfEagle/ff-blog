@@ -32,17 +32,17 @@ packages:
       specific question you would like to explore or as a top-up if we have
       worked together previously.
     heading: Explore.
-    image: /img/Group 13.png
+    image: /img/Group 13@2x.png
   - content: >-
       Block of 4 coaching sessions at an hourly rate of £50 (total cost of
       £200).
     heading: Navigate.
-    image: /img/Group 19.png
+    image: /img/Group 19@2x.png
   - content: >-
       Block of 6 coaching sessions at an hourly rate of £45 per session (total
       cost of £270).
     heading: Create.
-    image: /img/Group 11.png
+    image: /img/Group 11@2x.png
 quote1:
   by: Liza
   quote: >-
