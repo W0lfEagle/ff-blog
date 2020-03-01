@@ -125,7 +125,7 @@ export const IndexPageTemplate = ({
     <section className="hero is-danger">
       <div className="hero-body">
         <div className="container has-text-centered">
-          <h1 className="title">{quote1.quote}</h1>
+          <h1 className="title">"{quote1.quote}"</h1>
           <h2 className="subtitle is-italic">- {quote1.by}</h2>
         </div>
       </div>
@@ -158,7 +158,7 @@ export const IndexPageTemplate = ({
     <section className="hero is-primary">
       <div className="hero-body">
         <div className="container has-text-centered">
-          <h1 className="title">{quote2.quote}</h1>
+          <h1 className="title">"{quote2.quote}"</h1>
           <h2 className="subtitle is-italic">- {quote2.by}</h2>
         </div>
       </div>

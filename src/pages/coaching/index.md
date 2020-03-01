@@ -1,6 +1,6 @@
 ---
 templateKey: coaching-page
-cover_image: /img/ff-face-2-google-photos.jpg
+cover_image: /img/felicity-face-1-square.jpg
 heading_and_content:
   - content:
       - paragraph: >-
@@ -26,11 +26,14 @@ heading_and_content:
           not sure you’re ready to commit, this is a wonderful place to get a
           taste for what might be possible without any obligation.
     heading: Let’s talk...
-  - content:
-      - paragraph: >-
-          Sessions take place via phone, video call or in-person in east London
-          on a weekly or bi-weekly basis. 
-    heading: The details...
+details_heading: The details...
+details_description:
+  Sessions take place via phone, video call or in-person in east London
+  on a weekly or bi-weekly basis.
+quote1:
+  by: Liza
+  quote: >-
+    No matter how I was feeling at the beginning of a session with Felicity, I always felt much more positive and inspired by the end...in our first session, I identified a limiting belief that had been influencing me for years and after only 6 sessions, I now realise that I no longer believe it. Thank you, Felicity. I enjoyed our sessions a lot!
 packages:
   - content: >-
       One-off coaching sessions at an hourly rate of £60. Appropriate for a
@@ -40,7 +43,7 @@ packages:
     image: /img/screenshot-2020-02-19-at-17.57.39.png
   - content: >-
       Block of 4 coaching sessions at an hourly rate of £50 (total cost of
-      £200). 
+      £200).
     heading: Navigate.
     image: /img/screenshot-2020-02-19-at-17.57.54.png
   - content: >-
@@ -49,4 +52,3 @@ packages:
     heading: Create.
     image: /img/screenshot-2020-02-19-at-17.57.31.png
 ---
-
