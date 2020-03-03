@@ -28,19 +28,19 @@ heading_and_content:
     heading: Let’s talk...
 packages:
   - content: >-
-      One-off coaching sessions at an hourly rate of £60. Appropriate for a
-      specific question you would like to explore or as a top-up if we have
-      worked together previously.
+      One-off 75 minute coaching session. Appropriate for a specific question
+      you would like to explore or as a top-up if we have worked together
+      previously.
     heading: Explore.
     image: /img/Group 13@2x.png
   - content: >-
-      Block of 4 coaching sessions at an hourly rate of £50 (total cost of
-      £200).
+      Align with your internal compass with a block of 4 coaching sessions.
+      Email support and follow-up tools available between sessions.
     heading: Navigate.
     image: /img/Group 19@2x.png
   - content: >-
-      Block of 6 coaching sessions at an hourly rate of £45 per session (total
-      cost of £270).
+      Create meaningful lasting change with a block of 6 coaching sessions.
+      Email support and follow-up tools available between sessions.
     heading: Create.
     image: /img/Group 11@2x.png
 quote1:
@@ -54,6 +54,7 @@ quote1:
 details_heading: The details...
 details_description: >-
   Sessions take place via phone, video call or in-person in east London on a
-  weekly or bi-weekly basis.
+  weekly or bi-weekly basis. Hourly rates start from £45 depending on the number
+  of sessions booked. Reduced fees and payment plans available upon request.
 ---
 
