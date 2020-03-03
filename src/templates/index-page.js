@@ -138,18 +138,17 @@ export const IndexPageTemplate = ({
     {/* KIND WORDS SECTION */}
     <section className="section is-medium">
       <div className="container">
-        <div className="heading">
-          <h1 className="title has-text-info has-text-centered">
-            Kind Words...
-          </h1>
-        </div>
+        <h1 className="title has-text-info has-text-centered">Kind Words...</h1>
         <div className="section">
-          <div className="columns">
+          <div className="columns is-multiline">
             {testimonials.map(t => (
-              <div className="column">
-                <p>
-                  “{t.quote}” - {t.by}
-                </p>
+              <div className="column is-6">
+                <div className="card">
+                  <div class="card-content">
+                    <p>“{t.quote}”</p>
+                    <p class="subtitle is-italic">- {t.by}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
