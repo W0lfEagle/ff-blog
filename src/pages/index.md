@@ -26,7 +26,7 @@ pageContent:
   - paragraph: >-
       Drop me a line if this sounds like you. Our first call is free and a
       wonderful place to get a taste for coaching without any commitment.
-salesPitch: 'Let’s connect, have a chat and dream about what’s possible...'
+salesPitch: "Let’s connect, have a chat and dream about what’s possible..."
 quote1:
   by: Henri Bergson
   quote: >-
@@ -57,15 +57,7 @@ testimonials:
       No matter how I was feeling at the beginning of each session, I always
       felt much more positive and inspired by the end. I really enjoyed our
       sessions together.
-  - by: Richard
-    quote: >-
-      The main benefits I found were from you helping me voice the things out
-      loud which I subconsciously knew but had never verbalised. You were also
-      really good at leading me deeper to the root of any thoughts and beliefs
-      and thinking about where those things came from. Also you were really easy
-      to talk to which I liked and had a lovely tonality and gentleness.
 quote2:
   by: Rumi
-  quote: 'And you, when will you begin that long journey into yourself?'
+  quote: "And you, when will you begin that long journey into yourself?"
 ---
-

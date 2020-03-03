@@ -202,6 +202,38 @@ collections:
               name: "details_description",
               widget: "string",
             }
+      - file: "src/pages/kind-words/index.md"
+        label: "Kind Words"
+        name: "kind-words"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "kind-words-page",
+            }
+          - { label: Heading, name: heading, widget: string }
+          - {
+              label: Testimonials,
+              name: testimonials,
+              widget: list,
+              fields:
+                [
+                  { label: Quote, name: quote, widget: text },
+                  { label: By, name: by, widget: string },
+                ],
+            }
+          - { label: Image, name: image, widget: image }
+          - {
+              label: Quote 1,
+              name: quote1,
+              widget: object,
+              fields:
+                [
+                  { label: Quote, name: quote, widget: text },
+                  { label: By, name: by, widget: string },
+                ],
+            }
 
   - name: "navbarAndFooter"
     label: "Navbar & Footer"
