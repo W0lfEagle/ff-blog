@@ -212,6 +212,7 @@ collections:
               widget: "hidden",
               default: "kind-words-page",
             }
+          - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
           - {
               label: Testimonials,
@@ -223,7 +224,6 @@ collections:
                   { label: By, name: by, widget: string },
                 ],
             }
-          - { label: Image, name: image, widget: image }
           - {
               label: Quote 1,
               name: quote1,
