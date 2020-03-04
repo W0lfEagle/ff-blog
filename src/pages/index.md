@@ -26,12 +26,12 @@ pageContent:
   - paragraph: >-
       Drop me a line if this sounds like you. Our first call is free and a
       wonderful place to get a taste for coaching without any commitment.
-salesPitch: "Let’s connect, have a chat and dream about what’s possible..."
+salesPitch: 'Let’s connect, have a chat and dream about what’s possible...'
 quote1:
-  by: Henri Bergson
+  by: Socrates
   quote: >-
-    To exist is to change, to change is to mature, to mature is to go on
-    creating oneself endlessly.
+    The secret of change is to focus all of your energy not on fighting the old,
+    but on building the new.
 testimonials:
   - by: Shae
     quote: >-
@@ -59,5 +59,6 @@ testimonials:
       sessions together.
 quote2:
   by: Rumi
-  quote: "And you, when will you begin that long journey into yourself?"
+  quote: 'And you, when will you begin that long journey into yourself?'
 ---
+
