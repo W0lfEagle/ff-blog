@@ -41,13 +41,16 @@ testimonials:
       valued and wanted to work for. What would get me up in the morning was a
       big mystery. I wasn’t sure if the coaching would work as I’m quite
       stubborn and don’t like listening to other people’s advice. Luckily,
-      coaching was not like that and you were more of a guide than an advisor. I
-      loved working with you. You were very receptive and you love to see people
-      change which empowered me to do so. Changing the way you live your life is
-      not easy and having another voice to make you more aware and empowered to
-      make that change was a huge help. The values work we did opened my eyes.
-      Knowing what I value has given meaning to the actions I take every day.
-      Coaching with you gave me something to work towards and feel good about. 
+      coaching was not like that and you were more of a guide than an advisor. 
+
+
+      I loved working with you. You were very receptive and you love to see
+      people change which empowered me to do so. Changing the way you live your
+      life is not easy and having another voice to make you more aware and
+      empowered to make that change was a huge help. The values work we did
+      opened my eyes. Knowing what I value has given meaning to the actions I
+      take every day. Coaching with you gave me something to work towards and
+      feel good about. 
 quote1:
   by: Ben
   quote: >-
