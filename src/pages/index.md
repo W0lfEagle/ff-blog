@@ -8,7 +8,7 @@ mainpitch:
   description: >-
     I help people know, trust and express themselves in times of transition to
     thrive with intention.
-  title: Hello! I’m Felicity.
+  title: Hello!
 image2: /img/felicity-face-1-square.jpg
 pageContent:
   - paragraph: >-
