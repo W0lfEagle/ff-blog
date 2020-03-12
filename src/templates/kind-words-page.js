@@ -33,7 +33,7 @@ export const KindWordsPageTemplate = ({
                   <div className="column is-6">
                     <div className="card">
                       <div class="card-content">
-                        <p>“{t.quote}”</p>
+                        <p className="has-text-justified">“{t.quote}”</p>
                         <p class="subtitle is-italic">- {t.by}</p>
                       </div>
                     </div>
@@ -49,8 +49,8 @@ export const KindWordsPageTemplate = ({
       <section className="hero is-danger">
         <div className="hero-body">
           <div className="container has-text-centered">
-            <h1 className="title">"{quote1.quote}"</h1>
-            <h2 className="subtitle is-italic">- {quote1.by}</h2>
+            <h1 className="is-size-3">"{quote1.quote}"</h1>
+            <h2 className="is-size-4 is-italic">- {quote1.by}</h2>
           </div>
         </div>
       </section>

@@ -3,10 +3,6 @@ templateKey: about-page
 title1: 'Hi there,'
 title2: I'm so glad you're here...
 image1: /img/ff-face-3-google-photos.jpg
-quote1:
-  by: RUMI
-  quote: >-
-    Try not to resist the changes that come your way. Instead let life live through you. And do not worry that your life is turning upside down. how do you know that the side you are used to is better than the one to come?
 myJourney:
   heading: Some of my stops along the way...
   steps:
@@ -21,8 +17,14 @@ myJourney:
         Rica.
     - step: 3 years working in corporate relocation in London.
     - step: A year studying transformational coaching at Animas Centre in London.
+quote1:
+  by: RUMI
+  quote: >-
+    Try not to resist the changes that come your way. Instead let life live
+    through you. And do not worry that your life is turning upside down. how do
+    you know that the side you are used to is better than the one to come?
 ---
-I’m a coach, teacher and traveler who has been on a winding quest for purpose in work for the past 10 years and am now crafting the life and work that fills me with joy. I help people know, trust and express themselves in times of transition in order to intentionally create a self-directed life. 
+I’m a transformational coach (DIP) and medical anthropologist (MSc) who has been on a winding quest for purpose in work for the past 10 years and am now crafting the life and work that fills me with joy. I help people know, trust and express themselves in times of transition in order to intentionally create a self-directed life. 
 
 Through one-to-one coaching packages delivered online or face-to-face in east London, my goal is to help clients mindfully navigate change or intentionally create change in their lives. My work is steeped in a gentle sense of compassionate enquiry, kind curiosity, empathy and humor. 
 

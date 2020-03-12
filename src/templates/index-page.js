@@ -32,21 +32,21 @@ export const IndexPageTemplate = ({
         <div className="columns">
           <div className="column">
             <h1
-              className="has-text-weight-bold is-size-1 is-size-2-mobile has-text-centered"
+              className="is-size-1 is-size-2-mobile has-text-centered"
               style={{
                 color: "white",
-                lineHeight: "1.5",
+                lineHeight: "1.5"
                 // marginBottom: "3rem",
-                fontWeight: "bolder"
+                // fontWeight: "bolder"
               }}
             >
               {title}
             </h1>
-            <h1 className="has-text-weight-bold has-text-white is-size-2 is-size-3-mobile is-italic has-text-centered">
+            <h1 className="has-text-white is-size-2 is-size-3-mobile is-italic has-text-centered">
               <span>{heroTitle2}</span>
               {/* <br /> */}
             </h1>
-            <h1 className="has-text-weight-bold has-text-white is-size-2 is-size-3-mobile has-text-centered">
+            <h1 className="has-text-white is-size-2 is-size-3-mobile has-text-centered">
               {heroTitle3}
             </h1>
 
@@ -54,9 +54,14 @@ export const IndexPageTemplate = ({
               class="buttons has-addons is-centered"
               style={{ marginTop: "2rem" }}
             >
-              <button className="button is-medium is-primary">
-                Start your journey
-              </button>
+              <a
+                href="https://calendly.com/felicityforsyth/coaching"
+                target="_blank"
+              >
+                <button className="has-text-weight-bold button is-medium is-primary">
+                  Start your journey
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -68,14 +73,19 @@ export const IndexPageTemplate = ({
           <div className="column is-6-tablet is-5-widescreen is-offset-1-widescreen">
             <div className="section">
               <div className="content">
-                <div className="tile">
-                  <h1 className="title has-text-info">{mainpitch.title}</h1>
-                </div>
-                <div className="tile">
-                  <h3 className="subtitle has-text-info">
-                    {mainpitch.description}
-                  </h3>
-                </div>
+                {/* <div className="tile"> */}
+                <h1 className="title has-text-info is-size-2">
+                  {mainpitch.title}
+                  <br />
+                  I'm Felicity.
+                </h1>
+                {/* <h1 className="title has-text-info">I'm Felicity</h1> */}
+                {/* </div> */}
+                {/* <div className="tile"> */}
+                <h3 className="subtitle has-text-info">
+                  {mainpitch.description}
+                </h3>
+                {/* </div> */}
               </div>
               <div className="content">
                 {pageContent.map(content => (
@@ -88,24 +98,35 @@ export const IndexPageTemplate = ({
           </div>
 
           <div className="column is-6-tablet is-5-widescreen">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <figure className="image">
-                  <PreviewCompatibleImage imageInfo={{ image: image2 }} />
-                </figure>
-              </div>
-            </div>
             <div className="section">
-              <div className="content">
-                <div className="tile">
-                  <h2 className="title has-text-primary has-text-centered">
-                    {salesPitch}
-                  </h2>
+              <div className="columns">
+                <div className="column is-12 ">
+                  <figure className="image">
+                    <PreviewCompatibleImage imageInfo={{ image: image2 }} />
+                  </figure>
                 </div>
               </div>
-              <button className="button is-medium is-fullwidth is-primary">
-                Schedule a call
-              </button>
+              {/* <div className="section"> */}
+              <div className="content">
+                {/* <div className="tile"> */}
+                <p className="is-size-4 has-text-primary is-family-secondary has-text-centered">
+                  {salesPitch}
+                </p>
+                {/* </div> */}
+              </div>
+              <div
+                class="buttons has-addons is-centered"
+                // style={{ marginTop: "2rem" }}
+              >
+                <a
+                  href="https://calendly.com/felicityforsyth/coaching"
+                  target="_blank"
+                >
+                  <button className="button has-text-weight-bold is-medium is-primary">
+                    Schedule a call
+                  </button>
+                </a>
+              </div>
             </div>
 
             {/* TODO - Contact Card Component */}
@@ -125,11 +146,11 @@ export const IndexPageTemplate = ({
     </div>
 
     {/* QUOTE 1 */}
-    <section className="hero is-danger">
+    <section className="hero is-danger is-medium">
       <div className="hero-body">
         <div className="container has-text-centered">
-          <h1 className="title">"{quote1.quote}"</h1>
-          <h2 className="subtitle is-italic">- {quote1.by}</h2>
+          <h1 className="is-size-2">"{quote1.quote}"</h1>
+          <h2 className="is-italic is-size-3">- {quote1.by}</h2>
         </div>
       </div>
     </section>
@@ -145,7 +166,7 @@ export const IndexPageTemplate = ({
               <div className="column is-6">
                 <div className="card">
                   <div class="card-content">
-                    <p>“{t.quote}”</p>
+                    <p className="has-text-justified">“{t.quote}”</p>
                     <p class="subtitle is-italic">- {t.by}</p>
                   </div>
                 </div>
@@ -157,11 +178,11 @@ export const IndexPageTemplate = ({
     </section>
     {/* ------ */}
 
-    <section className="hero is-primary">
+    <section className="hero is-primary is-medium">
       <div className="hero-body">
         <div className="container has-text-centered">
-          <h1 className="title">"{quote2.quote}"</h1>
-          <h2 className="subtitle is-italic">- {quote2.by}</h2>
+          <h1 className="is-size-2">"{quote2.quote}"</h1>
+          <h2 className="is-italic is-size-3">- {quote2.by}</h2>
         </div>
       </div>
     </section>

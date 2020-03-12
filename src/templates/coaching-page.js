@@ -38,7 +38,9 @@ export const CoachingPageTemplate = ({
                       {hc.heading}
                     </h2>
                     {hc.content.map(c => (
-                      <p key={c.paragraph}>{c.paragraph}</p>
+                      <p className="has-text-justified" key={c.paragraph}>
+                        {c.paragraph}
+                      </p>
                     ))}
                   </div>
                 ))}
@@ -54,13 +56,23 @@ export const CoachingPageTemplate = ({
                 <div className="card contact-card">
                   <div className="card-content has-text-centered">
                     <h2 className="is-size-4 has-text-centered">
-                      Start your journey with a free coaching session.
+                      Start your journey with a{" "}
+                      <span className="has-text-weight-bold">free</span>{" "}
+                      coaching session.
                     </h2>
-                  </div>
-                  <div className="card-content">
-                    <button className="button is-medium is-fullwidth is-primary">
-                      Schedule a call
-                    </button>
+                    {/* </div>
+                    <div className="card-content"> */}
+                    <a
+                      href="https://calendly.com/felicityforsyth/coaching"
+                      target="_blank"
+                    >
+                      <button
+                        className="button has-text-weight-bold is-medium is-fullwidth is-primary"
+                        style={{ marginTop: "1rem" }}
+                      >
+                        Schedule a call
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -73,8 +85,8 @@ export const CoachingPageTemplate = ({
       <section className="hero is-primary">
         <div className="hero-body">
           <div className="container has-text-centered">
-            <h1 className="title">"{quote1.quote}"</h1>
-            <h2 className="subtitle is-italic">- {quote1.by}</h2>
+            <h1 className="is-size-3">"{quote1.quote}"</h1>
+            <h2 className="is-size-4 is-italic">- {quote1.by}</h2>
           </div>
         </div>
       </section>
