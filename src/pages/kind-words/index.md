@@ -1,6 +1,6 @@
 ---
 templateKey: kind-words-page
-image: /img/ff-face-3-google-photos.jpg
+image: /img/IMG_3467.JPG
 heading: Kind Words...
 testimonials:
   - by: Shae
