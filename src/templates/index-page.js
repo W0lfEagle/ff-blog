@@ -24,7 +24,8 @@ export const IndexPageTemplate = ({
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`
+        })`,
+        backgroundColor: "#00B8FF"
       }}
     >
       <div className="container is-fluid">
@@ -260,7 +261,7 @@ export const pageQuery = graphql`
         heroTitle3
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 1024, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
