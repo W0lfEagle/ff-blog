@@ -24,7 +24,9 @@ heading_and_content:
           call where we will have a chat about what you’re looking for and where
           you want to go. The call will include some coaching so even if you’re
           not sure you’re ready to commit, this is a wonderful place to get a
-          taste for what might be possible without any obligation.
+          taste for what might be possible without any obligation. You can
+          schedule a call via the link here or email me at
+          coaching@felicityforsyth.com.
     heading: Let’s talk...
 packages:
   - content: >-
