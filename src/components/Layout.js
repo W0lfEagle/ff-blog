@@ -1,13 +1,14 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import './all.sass'
-import useSiteMetadata from './SiteMetadata'
-import { withPrefix, graphql } from 'gatsby'
+import React from "react";
+import { Helmet } from "react-helmet";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import "./all.sass";
+import useSiteMetadata from "./SiteMetadata";
+import { withPrefix, graphql } from "gatsby";
+import image from "../img/social/social-hero-image.png";
 
 const TemplateWrapper = ({ children, footerData, navbarData }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description } = useSiteMetadata();
   return (
     <div>
       <Helmet>
@@ -18,24 +19,24 @@ const TemplateWrapper = ({ children, footerData, navbarData }) => {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href={`${withPrefix('/')}img/apple-touch-icon.png`}
+          href={`${withPrefix("/")}img/apple-touch-icon.png`}
         />
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix('/')}img/favicon-32x32.png`}
+          href={`${withPrefix("/")}img/favicon-32x32.png`}
           sizes="32x32"
         />
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix('/')}img/favicon-16x16.png`}
+          href={`${withPrefix("/")}img/favicon-16x16.png`}
           sizes="16x16"
         />
 
         <link
           rel="mask-icon"
-          href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
+          href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
         <meta name="theme-color" content="#fff" />
@@ -43,21 +44,20 @@ const TemplateWrapper = ({ children, footerData, navbarData }) => {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta
-          property="og:image"
-          content={`${withPrefix('/')}img/og-image.jpg`}
-        />
+        <meta property="og:image" content={image} />
       </Helmet>
-      <Navbar data={navbarData}/>
+      <Navbar data={navbarData} />
       <div>{children}</div>
-      <Footer data={footerData}/>
+      <Footer data={footerData} />
     </div>
-  )
-}
+  );
+};
 
 export const query = graphql`
   fragment LayoutFragment on Query {
-    footerData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "footer" } } }) {
+    footerData: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "footer" } } }
+    ) {
       edges {
         node {
           id
@@ -77,7 +77,9 @@ export const query = graphql`
         }
       }
     }
-    navbarData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "navbar" } } }) {
+    navbarData: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "navbar" } } }
+    ) {
       edges {
         node {
           id
@@ -98,4 +100,4 @@ export const query = graphql`
   }
 `;
 
-export default TemplateWrapper
+export default TemplateWrapper;

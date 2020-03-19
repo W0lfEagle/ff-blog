@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: "Felicity Forsyth Change + Transition Coach",
     description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution."
+      "Through one-to-one coaching packages delivered online, I help people know, trust and express themselves in times of transition to thrive with intention.",
+    image: `${__dirname}/src/img/social/social-hero-image.png`
   },
   plugins: [
     "gatsby-plugin-react-helmet",
