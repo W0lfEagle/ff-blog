@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix, graphql } from "gatsby";
+import image from "../img/social-hero-image.png";
 
 const TemplateWrapper = ({ children, footerData, navbarData }) => {
   const { title, description } = useSiteMetadata();
@@ -43,10 +44,7 @@ const TemplateWrapper = ({ children, footerData, navbarData }) => {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta
-          property="og:image"
-          content={`${withPrefix("/")}img/social/social-hero-image.png`}
-        />
+        <meta property="og:image" content={image} />
       </Helmet>
       <Navbar data={navbarData} />
       <div>{children}</div>
