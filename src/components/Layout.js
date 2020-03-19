@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix, graphql } from "gatsby";
-import image from "../img/social-hero-image.png";
+import image from "../img/social/social-hero-image.png";
 
 const TemplateWrapper = ({ children, footerData, navbarData }) => {
   const { title, description } = useSiteMetadata();
