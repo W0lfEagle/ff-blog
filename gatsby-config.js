@@ -3,7 +3,7 @@ module.exports = {
     title: "Felicity Forsyth Change + Transition Coach",
     description:
       "Through one-to-one coaching packages delivered online, I help people know, trust and express themselves in times of transition to thrive with intention.",
-    image: `${__dirname}/static/img/social-hero-image.png`
+    image: `${__dirname}/src/img/social/social-hero-image.png`
   },
   plugins: [
     "gatsby-plugin-react-helmet",
