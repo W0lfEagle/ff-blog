@@ -21,7 +21,7 @@ quote1:
   by: RUMI
   quote: >-
     Try not to resist the changes that come your way. Instead let life live
-    through you. And do not worry that your life is turning upside down. how do
+    through you. And do not worry that your life is turning upside down. How do
     you know that the side you are used to is better than the one to come?
 ---
 I’m a transformational coach (DIP) and medical anthropologist (MSc) who has been on a winding quest for purpose in work for the past 10 years and am now crafting the life and work that fills me with joy. I help people know, trust and express themselves in times of transition in order to intentionally create a self-directed life. 
